@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>夜市王</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", Arial, sans-serif;
+      background: #f8f8f8;
+      color: #222;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      background: #ffda44;
+      box-shadow: 0 2px 8px #0001;
+      padding: 0 1rem;
+      height: 60px;
+    }
+    .header-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      margin-right: 1rem;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #fffbe6;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+    .header-btn:hover {
+      background: #ffe066;
+    }
+    .header-btn img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      display: block;
+    }
+    .header-title {
+      flex: 1;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #444;
+      user-select: none;
+    }
+    @media (max-width: 600px) {
+      header {
+        height: 48px;
+        padding: 0 0.5rem;
+      }
+      .header-title {
+        font-size: 1.3rem;
+      }
+      .header-btn {
+        width: 36px;
+        height: 36px;
+        margin-right: 0.5rem;
+      }
+      .header-btn img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    .content {
+      max-width: 420px;
+      margin: 2.5rem auto 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #0001;
+      padding: 2.2rem 1.3rem 2rem 1.3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .main-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #c96a00;
+      margin-bottom: 1.2rem;
+      letter-spacing: 3px;
+      text-align: center;
+    }
+    .subtitle {
+      font-size: 1.25rem;
+      color: #e67e22;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+    .desc {
+      font-size: 1.05rem;
+      color: #666;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 600px) {
+      .content {
+        margin-top: 1.2rem;
+        padding: 1.3rem 0.7rem 1.2rem 0.7rem;
+      }
+      .main-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.7rem;
+      }
+      .subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 0.5rem;
+      }
+      .desc {
+        font-size: 0.98rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="header-btn" href="../../index.html">
+      <img src="" alt="按鈕">
+    </a>
+    <div class="header-title">夜市王</div>
+  </header>
+  <main>
+    <section class="content">
+      <div class="main-title">蚵仔煎</div>
+      <div class="subtitle">第一名</div>
+      <div class="desc">樂華夜市</div>
+    </section>
+  </main>
+</body>
+</html>

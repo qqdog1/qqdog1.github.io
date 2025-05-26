@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>台灣美食競賽地圖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", Arial, sans-serif;
+      background: #f8f8f8;
+      color: #222;
+    }
+    header {
+      text-align: center;
+      padding: 1.5rem 0 1rem 0;
+      background: #ffda44;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      box-shadow: 0 2px 8px #0001;
+    }
+    .main-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    /* 全國 */
+    .nation-list {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .nation-list li {
+      background: #fffbe6;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px #ffda4411;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin: 0;
+      min-width: 120px;
+      max-width: 180px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .nation-list li a {
+      display: block;
+      padding: 1.2rem 0.3rem;
+      text-decoration: none;
+      color: #222;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+      background: transparent;
+      position: relative;
+      z-index: 2;
+    }
+    .nation-list li a:hover {
+      background: #ffda44;
+      color: #b8860b;
+    }
+    /* 縣市列表 */
+    .city-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .city-list li {
+      flex: 0 1 70px;
+      max-width: 80px;
+      min-width: 60px;
+      min-height: 120px;
+      height: 140px;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px #0001;
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .city-list li a {
+      writing-mode: vertical-rl;
+      letter-spacing: 0.2em;
+      font-size: 1.3rem;
+      padding: 1.2rem 0.3rem;
+      min-height: 4.5em;
+      min-width: 0;
+      text-align: center;
+      text-decoration: none;
+      color: #222;
+      border-radius: 6px;
+      background: transparent;
+      position: relative;
+      z-index: 2;
+      transition: background 0.2s, color 0.2s;
+    }
+    .city-list li a:hover {
+      background: #ffda44;
+      color: #b8860b;
+    }
+    /* 背景圖層 */
+    .city-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.18;
+      transition: opacity 0.2s;
+    }
+    .city-list li:hover .city-bg {
+      opacity: 0.32;
+    }
+    /* RWD微調：讓方框高度在手機上不要太高 */
+    @media (max-width: 600px) {
+      .city-list li {
+        min-height: 90px;
+        height: 100px;
+      }
+      .nation-list li {
+        min-width: 60px;
+        max-width: 70px;
+      }
+      .city-list {
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>台灣美食競賽地圖</header>
+  <div class="main-container">
+    <ul class="nation-list">
+      <li><a href="./nationwide/nationwide.html">全國比賽</a></li>
+    </ul>
+    <ul class="city-list">
+      <li>
+        <div class="city-bg" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80');"></div>
+        <a href="">基隆市</a>
+      </li>
+      <li>
+        <div class="city-bg" style="background-image: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=80&q=80');"></div>
+        <a href="">臺北市</a>
+      </li>
+      <li><div class="city-bg"></div><a href="">新北市</a></li>
+      <li><div class="city-bg"></div><a href="">桃園市</a></li>
+      <li><div class="city-bg"></div><a href="">新竹市</a></li>
+      <li><div class="city-bg"></div><a href="">新竹縣</a></li>
+      <li><div class="city-bg"></div><a href="">苗栗縣</a></li>
+      <li><div class="city-bg"></div><a href="">臺中市</a></li>
+      <li><div class="city-bg"></div><a href="">彰化縣</a></li>
+      <li><div class="city-bg"></div><a href="">南投縣</a></li>
+      <li><div class="city-bg"></div><a href="">雲林縣</a></li>
+      <li><div class="city-bg"></div><a href="">嘉義市</a></li>
+      <li><div class="city-bg"></div><a href="">嘉義縣</a></li>
+      <li><div class="city-bg"></div><a href="">臺南市</a></li>
+      <li><div class="city-bg"></div><a href="">高雄市</a></li>
+      <li><div class="city-bg"></div><a href="">屏東縣</a></li>
+      <li><div class="city-bg"></div><a href="">宜蘭縣</a></li>
+      <li><div class="city-bg"></div><a href="">花蓮縣</a></li>
+      <li><div class="city-bg"></div><a href="">臺東縣</a></li>
+      <li><div class="city-bg"></div><a href="">澎湖縣</a></li>
+      <li><div class="city-bg"></div><a href="">金門縣</a></li>
+      <li><div class="city-bg"></div><a href="">連江縣</a></li>
+    </ul>
+  </div>
+</body>
+</html>
