@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>條碼 → 價格.com 搜尋</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap');
+
+  :root{
+    --ink: #0d1917;
+    --panel: #142723;
+    --panel-2: #1b322c;
+    --gold: #d9a441;
+    --gold-bright: #f0c56a;
+    --paper: #f3ede0;
+    --paper-dim: #b9c4bd;
+    --line: rgba(217,164,65,0.25);
+    --danger: #e0654a;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html, body{
+    margin:0; padding:0; height:100%;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Manrope', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* faint barcode-bar texture in the background, grounds the whole page in its subject */
+  body{
+    background-image:
+      repeating-linear-gradient(90deg,
+        rgba(217,164,65,0.05) 0px, rgba(217,164,65,0.05) 2px,
+        transparent 2px, transparent 6px,
+        rgba(217,164,65,0.035) 6px, rgba(217,164,65,0.035) 7px,
+        transparent 7px, transparent 13px);
+    background-attachment: fixed;
+  }
+
+  .wrap{
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100%;
+    padding: 28px 20px 40px;
+  }
+
+  header{ margin-bottom: 18px; }
+
+  .eyebrow{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--gold);
+    text-transform: uppercase;
+    display:flex; align-items:center; gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:6px; height:6px; border-radius:50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 3px rgba(217,164,65,0.18);
+  }
+
+  h1{
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 8px 0 6px;
+    color: var(--paper);
+  }
+
+  p.sub{
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--paper-dim);
+  }
+
+  /* ---- viewfinder ---- */
+  .scanner{
+    position: relative;
+    margin-top: 22px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #08110f;
+    border: 1px solid var(--line);
+    aspect-ratio: 3 / 4;
+  }
+
+  video{
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scaleX(1);
+  }
+
+  .scanner.inactive video{ display:none; }
+
+  .placeholder{
+    position:absolute; inset:0;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap: 14px; padding: 24px; text-align:center;
+  }
+  .scanner.active .placeholder{ display:none; }
+
+  .placeholder .icon{
+    width: 56px; height: 56px;
+    border: 2px solid var(--line);
+    border-radius: 14px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .placeholder .icon svg{ width: 28px; height: 28px; }
+
+  .placeholder .msg{ font-size: 13px; color: var(--paper-dim); max-width: 280px; }
+
+  /* reticle + laser only show while actively scanning */
+  .reticle{
+    position:absolute; inset: 14%;
+    border-radius: 12px;
+    pointer-events:none;
+    display:none;
+  }
+  .scanner.active .reticle{ display:block; }
+
+  .reticle::before, .reticle::after,
+  .reticle b::before, .reticle b::after{
+    content:"";
+    position:absolute;
+    width: 26px; height: 26px;
+    border: 3px solid var(--gold-bright);
+  }
+  .reticle::before{ top:0; left:0; border-right:none; border-bottom:none; border-top-left-radius:10px; }
+  .reticle::after{ top:0; right:0; border-left:none; border-bottom:none; border-top-right-radius:10px; }
+  .reticle b::before{ bottom:0; left:0; border-right:none; border-top:none; border-bottom-left-radius:10px; }
+  .reticle b::after{ bottom:0; right:0; border-left:none; border-top:none; border-bottom-right-radius:10px; }
+
+  .laser{
+    position:absolute; left:6%; right:6%; top:0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-bright), transparent);
+    box-shadow: 0 0 8px 1px var(--gold-bright);
+    animation: sweep 2.1s ease-in-out infinite;
+  }
+  @keyframes sweep{
+    0%   { top: 6%; opacity: 0; }
+    8%   { opacity: 1; }
+    50%  { top: 94%; opacity: 1; }
+    92%  { opacity: 1; }
+    100% { top: 6%; opacity: 0; }
+  }
+
+  /* ---- controls ---- */
+  .controls{ margin-top: 16px; display:flex; gap: 10px; }
+
+  button{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    border-radius: 11px;
+    padding: 13px 16px;
+    cursor: pointer;
+    transition: transform 0.08s ease, filter 0.15s ease;
+  }
+  button:active{ transform: scale(0.97); }
+
+  .btn-primary{
+    flex: 1;
+    background: var(--gold);
+    color: #14100a;
+  }
+  .btn-primary:hover{ filter: brightness(1.08); }
+  .btn-primary:disabled{ background:#4a4536; color:#8a8474; cursor:not-allowed; }
+
+  .btn-ghost{
+    background: var(--panel-2);
+    color: var(--paper);
+    border: 1px solid var(--line);
+  }
+
+  /* ---- status / result ---- */
+  .status{
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--paper-dim);
+    min-height: 18px;
+  }
+  .status.err{ color: var(--danger); }
+
+  .result-card{
+    display:none;
+    margin-top: 18px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 18px 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .result-card.show{ display:block; }
+  /* torn price-tag edge */
+  .result-card::before{
+    content:"";
+    position:absolute; top:0; left:0; right:0; height: 10px;
+    background:
+      radial-gradient(circle at 10px 0, transparent 6px, var(--panel) 6.5px) top left/20px 10px repeat-x;
+  }
+
+  .result-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .result-value{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--paper);
+    margin: 6px 0 2px;
+    word-break: break-all;
+  }
+
+  .result-format{
+    font-size: 12px;
+    color: var(--paper-dim);
+    margin-bottom: 14px;
+  }
+
+  .result-actions{ display:flex; gap: 10px; }
+  .result-actions a, .result-actions button{
+    flex:1; text-align:center; text-decoration:none;
+    display:flex; align-items:center; justify-content:center;
+  }
+
+  /* ---- manual entry ---- */
+  .manual{
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--line);
+  }
+  .manual .eyebrow{ margin-bottom: 8px; }
+
+  .manual form{ display:flex; gap: 8px; margin-top: 10px; }
+
+  .manual input{
+    flex:1;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+    color: var(--paper);
+    font-family:'JetBrains Mono', monospace;
+    font-size: 14px;
+  }
+  .manual input::placeholder{ color: #5f7168; }
+  .manual input:focus{ outline: 2px solid var(--gold-bright); outline-offset: 1px; }
+
+  footer{
+    margin-top: 30px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #6d7d75;
+  }
+  footer strong{ color: var(--paper-dim); }
+
+  @media (prefers-reduced-motion: reduce){
+    .laser{ animation: none; opacity: 0.6; top: 50%; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">barcode → search.kakaku.com</div>
+    <h1>掃條碼，直接跳到價格.com</h1>
+    <p class="sub">用手機相機掃商品條碼，自動帶著號碼開啟 kakaku.com 的搜尋結果——不用手動打字。</p>
+  </header>
+
+  <div class="scanner inactive" id="scanner">
+    <video id="video" autoplay playsinline muted></video>
+    <div class="placeholder" id="placeholder">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="1.6">
+          <path d="M4 7V5a1 1 0 0 1 1-1h2M20 7V5a1 1 0 0 0-1-1h-2M4 17v2a1 1 0 0 0 1 1h2M20 17v2a1 1 0 0 1-1 1h-2" stroke-linecap="round"/>
+          <rect x="8" y="8" width="1.4" height="8"/><rect x="11" y="8" width="0.8" height="8"/>
+          <rect x="13" y="8" width="2" height="8"/><rect x="16" y="8" width="1" height="8"/>
+        </svg>
+      </div>
+      <div class="msg" id="placeholderMsg">按下方按鈕啟動相機並開始掃描</div>
+    </div>
+    <div class="reticle"><b></b></div>
+    <div class="laser"></div>
+  </div>
+
+  <div class="controls">
+    <button class="btn-primary" id="startBtn">啟動相機掃描</button>
+    <button class="btn-ghost" id="stopBtn" style="display:none;">停止</button>
+  </div>
+
+  <div class="status" id="status"></div>
+
+  <div class="result-card" id="resultCard">
+    <div class="result-label">掃到的條碼</div>
+    <div class="result-value" id="resultValue">—</div>
+    <div class="result-format" id="resultFormat"></div>
+    <div class="result-actions">
+      <a class="btn-primary" id="openTab" target="_blank" rel="noopener">在新分頁開啟結果</a>
+      <button class="btn-ghost" id="rescanBtn">重新掃描</button>
+    </div>
+  </div>
+
+  <div class="manual">
+    <div class="eyebrow">手動輸入</div>
+    <p class="sub" style="margin-top:6px;">相機用不了，或掃描一直失敗？把條碼數字（或商品型號）貼在這裡也可以。</p>
+    <form id="manualForm">
+      <input type="text" id="manualInput" inputmode="numeric" placeholder="例如 4901777018888" autocomplete="off">
+      <button class="btn-primary" type="submit">搜尋</button>
+    </form>
+  </div>
+
+  <footer id="footerNote">
+    <strong>運作原理：</strong>網頁本身沒辦法去操控 kakaku.com 頁面裡的搜尋框（不同網域的頁面彼此看不到對方的內容），所以這個工具改用 kakaku.com 自己的搜尋網址格式（<code>search.kakaku.com/關鍵字/</code>）直接帶你到結果頁，效果等同於「幫你打好字並按下搜尋」。<br><br>
+    條碼掃描用的是瀏覽器內建的 Shape Detection API，目前只有 Chrome（Android／桌面）等 Chromium 系瀏覽器支援；若相機無法啟動，請改用下方手動輸入，或換 Chrome 開啟本頁。<br><br>
+    另外，相機權限只有在網頁以 <strong>HTTPS</strong> 開啟時才會生效——若你是直接打開這個本機檔案，相機通常會被瀏覽器擋掉，需要把檔案放到有 HTTPS 的空間（例如 GitHub Pages、Netlify）再用手機開啟。<br><br>
+    價格.com 的搜尋是用商品名稱／型號比對，不是每個 JAN 條碼都收錄在關鍵字索引裡；如果搜尋沒有結果，可以試試商品型號或名稱。
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  const scannerEl = document.getElementById('scanner');
+  const video = document.getElementById('video');
+  const startBtn = document.getElementById('startBtn');
+  const stopBtn = document.getElementById('stopBtn');
+  const statusEl = document.getElementById('status');
+  const placeholderMsg = document.getElementById('placeholderMsg');
+  const resultCard = document.getElementById('resultCard');
+  const resultValue = document.getElementById('resultValue');
+  const resultFormat = document.getElementById('resultFormat');
+  const openTab = document.getElementById('openTab');
+  const rescanBtn = document.getElementById('rescanBtn');
+  const manualForm = document.getElementById('manualForm');
+  const manualInput = document.getElementById('manualInput');
+
+  let stream = null;
+  let detector = null;
+  let loopTimer = null;
+  let running = false;
+
+  function kakakuUrl(term){
+    return 'https://search.kakaku.com/' + encodeURIComponent(term.trim()) + '/';
+  }
+
+  function setStatus(msg, isErr){
+    statusEl.textContent = msg || '';
+    statusEl.classList.toggle('err', !!isErr);
+  }
+
+  function showResult(value, format){
+    resultValue.textContent = value;
+    resultFormat.textContent = format ? ('格式：' + format) : '';
+    openTab.href = kakakuUrl(value);
+    resultCard.classList.add('show');
+  }
+
+  function hideResult(){
+    resultCard.classList.remove('show');
+  }
+
+  async function startScanning(){
+    hideResult();
+    setStatus('');
+
+    if (!('BarcodeDetector' in window)){
+      setStatus('這個瀏覽器不支援自動掃描條碼，請改用下方手動輸入，或換 Chrome 開啟本頁。', true);
+      placeholderMsg.textContent = '此瀏覽器不支援相機掃描，請用下方手動輸入';
+      return;
+    }
+
+    try{
+      const supported = await BarcodeDetector.getSupportedFormats();
+      const wanted = ['ean_13','ean_8','upc_a','upc_e','code_128','codabar','itf','qr_code'].filter(f => supported.includes(f));
+      detector = new BarcodeDetector({ formats: wanted.length ? wanted : supported });
+    }catch(e){
+      detector = new BarcodeDetector();
+    }
+
+    try{
+      stream = await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: { ideal: 'environment' } },
+        audio: false
+      });
+    }catch(e){
+      setStatus('無法開啟相機：' + (e.message || e.name) + '。若這是本機檔案（file://），瀏覽器多半會擋下相機權限，請改用下方手動輸入，或把檔案放到 HTTPS 網頁空間後再試。', true);
+      return;
+    }
+
+    video.srcObject = stream;
+    scannerEl.classList.remove('inactive');
+    scannerEl.classList.add('active');
+    startBtn.style.display = 'none';
+    stopBtn.style.display = '';
+    running = true;
+    setStatus('掃描中…把條碼放進框框裡');
+    scanLoop();
+  }
+
+  async function scanLoop(){
+    if (!running) return;
+    try{
+      const codes = await detector.detect(video);
+      if (codes && codes.length){
+        const code = codes[0];
+        if (navigator.vibrate) navigator.vibrate(70);
+        setStatus('掃描成功！');
+        showResult(code.rawValue, code.format);
+        stopScanning();
+        return;
+      }
+    }catch(e){
+      // transient decode errors are normal mid-scan, keep looping
+    }
+    loopTimer = setTimeout(scanLoop, 260);
+  }
+
+  function stopScanning(){
+    running = false;
+    if (loopTimer) clearTimeout(loopTimer);
+    if (stream){
+      stream.getTracks().forEach(t => t.stop());
+      stream = null;
+    }
+    scannerEl.classList.remove('active');
+    scannerEl.classList.add('inactive');
+    startBtn.style.display = '';
+    stopBtn.style.display = 'none';
+  }
+
+  startBtn.addEventListener('click', startScanning);
+  stopBtn.addEventListener('click', () => { stopScanning(); setStatus('已停止掃描。'); });
+  rescanBtn.addEventListener('click', () => { hideResult(); startScanning(); });
+
+  manualForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const v = manualInput.value.trim();
+    if (!v) return;
+    window.location.href = kakakuUrl(v);
+  });
+
+  if (location.protocol === 'file:'){
+    setStatus('注意：目前是以本機檔案開啟，相機權限可能無法使用，請放到 HTTPS 空間後再用手機開啟（下方手動輸入不受影響）。', true);
+  }
+})();
+</script>
+</body>
+</html>
