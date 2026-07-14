@@ -182,6 +182,16 @@
     border: 1px solid var(--line);
   }
 
+  .btn-icon{
+    flex: 0 0 auto;
+    padding: 13px 15px;
+    font-size: 17px;
+  }
+  .btn-icon.on{
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+
   /* ---- status / result ---- */
   .status{
     margin-top: 14px;
@@ -298,12 +308,15 @@
     </div>
     <div class="reticle"><b></b></div>
     <div class="laser"></div>
+    <canvas id="captureCanvas" style="display:none;"></canvas>
   </div>
 
   <div class="controls">
     <button class="btn-primary" id="startBtn">啟動相機掃描</button>
     <button class="btn-ghost" id="stopBtn" style="display:none;">停止</button>
+    <button class="btn-ghost btn-icon" id="torchBtn" style="display:none;">🔦</button>
   </div>
+  <p class="sub" id="accuracyTip" style="margin-top:8px; display:none;">小技巧：讓條碼填滿框框中間、放穩、光線打足，辨識率會明顯變好。</p>
 
   <div class="status" id="status"></div>
 
@@ -339,6 +352,9 @@
 <script>
 (function(){
   const scannerEl = document.getElementById('scanner');
+  const captureCanvas = document.getElementById('captureCanvas');
+  const torchBtn = document.getElementById('torchBtn');
+  const accuracyTip = document.getElementById('accuracyTip');
   const video = document.getElementById('video');
   const startBtn = document.getElementById('startBtn');
   const stopBtn = document.getElementById('stopBtn');
@@ -356,6 +372,8 @@
   let detector = null;
   let loopTimer = null;
   let running = false;
+  let currentTrack = null;
+  let torchOn = false;
 
   function kakakuUrl(term){
     return 'https://search.kakaku.com/' + encodeURIComponent(term.trim()) + '/';
@@ -397,7 +415,11 @@
 
     try{
       stream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: { ideal: 'environment' } },
+        video: {
+          facingMode: { ideal: 'environment' },
+          width: { ideal: 1920 },
+          height: { ideal: 1080 }
+        },
         audio: false
       });
     }catch(e){
@@ -405,20 +427,66 @@
       return;
     }
 
+    currentTrack = stream.getVideoTracks()[0];
+    torchOn = false;
+    torchBtn.style.display = 'none';
+    torchBtn.classList.remove('on');
+
+    try{
+      const caps = currentTrack.getCapabilities ? currentTrack.getCapabilities() : {};
+      if (caps.focusMode && caps.focusMode.includes('continuous')){
+        await currentTrack.applyConstraints({ advanced: [{ focusMode: 'continuous' }] });
+      }
+      if (caps.torch){
+        torchBtn.style.display = '';
+      }
+    }catch(e){ /* advanced camera controls not supported on this device, ignore */ }
+
     video.srcObject = stream;
     scannerEl.classList.remove('inactive');
     scannerEl.classList.add('active');
     startBtn.style.display = 'none';
     stopBtn.style.display = '';
+    accuracyTip.style.display = '';
     running = true;
-    setStatus('掃描中…把條碼放進框框裡');
+    setStatus('掃描中…把條碼放進框框裡，越貼近填滿框框越準');
     scanLoop();
+  }
+
+  function captureReticleFrame(){
+    const vw = video.videoWidth, vh = video.videoHeight;
+    if (!vw || !vh) return video; // video not ready yet, fall back to raw frame
+
+    // .scanner box keeps a 3:4 aspect ratio and the video fills it with object-fit:cover,
+    // so replicate that same center-crop here to find what's actually on screen...
+    const boxAspect = 3 / 4;
+    let sourceW, sourceH, offsetX, offsetY;
+    if (vw / vh > boxAspect){
+      sourceH = vh; sourceW = sourceH * boxAspect;
+      offsetX = (vw - sourceW) / 2; offsetY = 0;
+    } else {
+      sourceW = vw; sourceH = sourceW / boxAspect;
+      offsetX = 0; offsetY = (vh - sourceH) / 2;
+    }
+
+    // ...then zoom further into just the reticle (the box's center 72%, matching the CSS inset:14%).
+    const rw = sourceW * 0.72, rh = sourceH * 0.72;
+    const rx = offsetX + (sourceW - rw) / 2;
+    const ry = offsetY + (sourceH - rh) / 2;
+
+    // upscale the cropped region so the detector sees more detail per barcode bar
+    const destW = Math.min(1400, Math.round(rw * 2));
+    const destH = Math.round(destW * (rh / rw));
+    captureCanvas.width = destW;
+    captureCanvas.height = destH;
+    captureCanvas.getContext('2d').drawImage(video, rx, ry, rw, rh, 0, 0, destW, destH);
+    return captureCanvas;
   }
 
   async function scanLoop(){
     if (!running) return;
     try{
-      const codes = await detector.detect(video);
+      const codes = await detector.detect(captureReticleFrame());
       if (codes && codes.length){
         const code = codes[0];
         if (navigator.vibrate) navigator.vibrate(70);
@@ -447,11 +515,28 @@
       stream.getTracks().forEach(t => t.stop());
       stream = null;
     }
+    currentTrack = null;
+    torchOn = false;
     scannerEl.classList.remove('active');
     scannerEl.classList.add('inactive');
     startBtn.style.display = '';
     stopBtn.style.display = 'none';
+    torchBtn.style.display = 'none';
+    torchBtn.classList.remove('on');
+    accuracyTip.style.display = 'none';
   }
+
+  torchBtn.addEventListener('click', async () => {
+    if (!currentTrack) return;
+    try{
+      torchOn = !torchOn;
+      await currentTrack.applyConstraints({ advanced: [{ torch: torchOn }] });
+      torchBtn.classList.toggle('on', torchOn);
+    }catch(e){
+      torchOn = !torchOn; // revert, device rejected it
+      setStatus('這台裝置的相機不支援手電筒切換。', true);
+    }
+  });
 
   startBtn.addEventListener('click', startScanning);
   stopBtn.addEventListener('click', () => { stopScanning(); setStatus('已停止掃描。'); });
