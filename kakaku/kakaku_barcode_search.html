@@ -308,11 +308,11 @@
   <div class="status" id="status"></div>
 
   <div class="result-card" id="resultCard">
-    <div class="result-label">掃到的條碼</div>
+    <div class="result-label">新分頁被瀏覽器擋住了</div>
     <div class="result-value" id="resultValue">—</div>
     <div class="result-format" id="resultFormat"></div>
     <div class="result-actions">
-      <a class="btn-primary" id="openTab" target="_blank" rel="noopener">在新分頁開啟結果</a>
+      <a class="btn-primary" id="openTab" target="_blank" rel="noopener">手動開啟搜尋結果</a>
       <button class="btn-ghost" id="rescanBtn">重新掃描</button>
     </div>
   </div>
@@ -330,6 +330,7 @@
     <strong>運作原理：</strong>網頁本身沒辦法去操控 kakaku.com 頁面裡的搜尋框（不同網域的頁面彼此看不到對方的內容），所以這個工具改用 kakaku.com 自己的搜尋網址格式（<code>search.kakaku.com/關鍵字/</code>）直接帶你到結果頁，效果等同於「幫你打好字並按下搜尋」。<br><br>
     條碼掃描用的是瀏覽器內建的 Shape Detection API，目前只有 Chrome（Android／桌面）等 Chromium 系瀏覽器支援；若相機無法啟動，請改用下方手動輸入，或換 Chrome 開啟本頁。<br><br>
     另外，相機權限只有在網頁以 <strong>HTTPS</strong> 開啟時才會生效——若你是直接打開這個本機檔案，相機通常會被瀏覽器擋掉，需要把檔案放到有 HTTPS 的空間（例如 GitHub Pages、Netlify）再用手機開啟。<br><br>
+掃到條碼後會自動開新分頁，不用再按一次按鈕；但這個動作是在掃描迴圈裡觸發、不是你當下的一次點擊，有些瀏覽器的彈出視窗封鎖機制可能會擋下它。若被擋，畫面會出現一個手動開啟的連結當備援。<br><br>
     價格.com 的搜尋是用商品名稱／型號比對，不是每個 JAN 條碼都收錄在關鍵字索引裡；如果搜尋沒有結果，可以試試商品型號或名稱。
   </footer>
 
@@ -421,9 +422,16 @@
       if (codes && codes.length){
         const code = codes[0];
         if (navigator.vibrate) navigator.vibrate(70);
-        setStatus('掃描成功！');
-        showResult(code.rawValue, code.format);
+        const url = kakakuUrl(code.rawValue);
         stopScanning();
+        const win = window.open(url, '_blank');
+        if (win){
+          setStatus('已掃到「' + code.rawValue + '」，已在新分頁開啟搜尋結果。');
+          hideResult();
+        } else {
+          setStatus('已掃到「' + code.rawValue + '」，但瀏覽器擋下了自動開啟的新分頁，請手動點下面的連結。', true);
+          showResult(code.rawValue, code.format);
+        }
         return;
       }
     }catch(e){
