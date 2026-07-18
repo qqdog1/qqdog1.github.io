@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Privacy Policy · BestSeller - Back To The Top</title>
+<style>
+  :root {
+    --bg: #0f1524;
+    --card: #161d30;
+    --text: #e6e9f2;
+    --muted: #9aa4bd;
+    --accent: #f2c14e;
+    --border: #263148;
+    --link: #7fb0ff;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f4f6fb;
+      --card: #ffffff;
+      --text: #1b2130;
+      --muted: #5a6480;
+      --accent: #b8860b;
+      --border: #dde3ef;
+      --link: #2563c9;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", "Noto Sans", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", "Microsoft JhengHei", "PingFang TC", sans-serif;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+  header.top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 18px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 1.55rem;
+    margin: 0 0 4px;
+    line-height: 1.3;
+  }
+  .app-name { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 0.9rem; margin: 0; }
+  .lang-toggle {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .lang-toggle button {
+    background: transparent;
+    color: var(--muted);
+    border: none;
+    padding: 7px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .lang-toggle button.active {
+    background: var(--accent);
+    color: #1b2130;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin: 34px 0 10px;
+    padding-top: 6px;
+    color: var(--text);
+  }
+  section > p:first-of-type { margin-top: 0; }
+  p { margin: 10px 0; }
+  ul { margin: 10px 0; padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--link); }
+  code {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 1px 6px;
+    border-radius: 5px;
+    font-size: 0.88em;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 16px 0;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  [data-lang] { display: none; }
+  html[lang="zh-Hant"] [data-lang="zh"] { display: block; }
+  html[lang="en"] [data-lang="en"] { display: block; }
+  /* inline elements keep inline display when shown */
+  html[lang="zh-Hant"] span[data-lang="zh"],
+  html[lang="en"] span[data-lang="en"] { display: inline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div>
+      <h1>
+        <span data-lang="zh">隱私權政策</span>
+        <span data-lang="en">Privacy Policy</span>
+      </h1>
+      <p class="meta">
+        <span class="app-name">BestSeller - Back To The Top</span><br>
+        <span data-lang="zh">套件名稱：<code>com.echohole.bestseller</code>　·　生效日期：2026 年 7 月 18 日</span>
+        <span data-lang="en">Package: <code>com.echohole.bestseller</code> · Effective: July 18, 2026</span>
+      </p>
+    </div>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button id="btn-en" onclick="setLang('en')">English</button>
+      <button id="btn-zh" onclick="setLang('zh-Hant')">中文</button>
+    </div>
+  </header>
+
+  <!-- ── Intro ─────────────────────────────────────────── -->
+  <section>
+    <div data-lang="zh">
+      <p>本隱私權政策說明 echohole（以下稱「我們」）開發的行動遊戲
+        <strong>BestSeller - Back To The Top</strong>（以下稱「本遊戲」）如何處理您的資訊。
+        我們的核心原則是：<strong>本遊戲盡可能少地蒐集資料，且不會蒐集能直接辨識您個人身分的資料。</strong>
+        下載、安裝或使用本遊戲，即表示您同意本政策所述之作法。</p>
+    </div>
+    <div data-lang="en">
+      <p>This Privacy Policy explains how echohole (“we”, “us”, or “our”) handles your
+        information in the mobile game <strong>BestSeller - Back To The Top</strong>
+        (the “Game”). Our guiding principle is simple:
+        <strong>the Game collects as little data as possible and does not collect
+        information that directly identifies you.</strong>
+        By downloading, installing, or using the Game, you agree to the practices
+        described in this policy.</p>
+    </div>
+  </section>
+
+  <!-- ── 1. Data we collect ────────────────────────────── -->
+  <section>
+    <h2><span data-lang="zh">1. 我們蒐集的資料</span><span data-lang="en">1. Information We Collect</span></h2>
+
+    <div data-lang="zh">
+      <p><strong>a) 儲存在您裝置上的遊戲進度</strong><br>
+        本遊戲會將您的遊戲進度與設定儲存在<strong>您裝置本機</strong>，包含關卡進度、金幣、升級、
+        圖鑑收集、成就狀態與語言／音量等設定。這些資料<strong>存放於您的裝置內，不會傳送給我們</strong>，
+        並會在您解除安裝本遊戲時一併移除。</p>
+
+      <p><strong>b) Google Play 遊戲服務（成就 / 登入）</strong><br>
+        本遊戲整合 Google Play 遊戲服務，用於解鎖與同步成就。若您選擇登入，Google 會處理您的
+        Play 遊戲帳號資訊（例如玩家 ID、玩家代稱）以提供該服務。此互動由 Google 依其自身隱私權
+        政策管理；登入為<strong>選用</strong>，本遊戲離線亦可完整遊玩。</p>
+
+      <p><strong>c) 廣告（Google AdMob）</strong><br>
+        本遊戲可能會顯示<strong>獎勵式廣告</strong>（例如觀看廣告以復活或獲得額外金幣），
+        由 Google AdMob 提供。廣告服務可能會蒐集與使用裝置與廣告相關的識別碼（例如廣告 ID）、
+        概略的裝置資訊及互動資料，用於投放與衡量廣告。此類資料由 Google 蒐集與處理。</p>
+
+      <p><strong>我們不會蒐集</strong>您的姓名、電子郵件、電話、精確定位、通訊錄或相片。</p>
+    </div>
+
+    <div data-lang="en">
+      <p><strong>a) Game progress stored on your device</strong><br>
+        The Game saves your progress and settings <strong>locally on your device</strong> —
+        including level progress, coins, upgrades, bestiary entries, achievement status,
+        and preferences such as language and volume. This data
+        <strong>stays on your device, is not sent to us</strong>, and is removed when you
+        uninstall the Game.</p>
+
+      <p><strong>b) Google Play Games Services (achievements / sign-in)</strong><br>
+        The Game integrates Google Play Games Services to unlock and sync achievements.
+        If you choose to sign in, Google processes your Play Games account information
+        (such as your player ID and gamer tag) to provide this service. This interaction
+        is governed by Google’s own privacy policy. Sign-in is <strong>optional</strong> —
+        the Game is fully playable offline.</p>
+
+      <p><strong>c) Advertising (Google AdMob)</strong><br>
+        The Game may show <strong>rewarded ads</strong> (for example, watch an ad to revive
+        or to earn extra coins), served by Google AdMob. Ad services may collect and use
+        device and advertising identifiers (such as the Advertising ID), coarse device
+        information, and interaction data to deliver and measure ads. This data is collected
+        and processed by Google.</p>
+
+      <p><strong>We do not collect</strong> your name, email, phone number, precise location,
+        contacts, or photos.</p>
+    </div>
+  </section>
+
+  <!-- ── 2. How we use it ──────────────────────────────── -->
+  <section>
+    <h2><span data-lang="zh">2. 資料的使用方式</span><span data-lang="en">2. How Information Is Used</span></h2>
+    <div data-lang="zh">
+      <ul>
+        <li>儲存並還原您的遊戲進度與設定；</li>
+        <li>透過 Google Play 遊戲服務提供成就與（選用的）登入功能；</li>
+        <li>顯示廣告並衡量其成效（若您使用廣告功能）。</li>
+      </ul>
+      <p>我們<strong>不會</strong>販售您的資料。</p>
+    </div>
+    <div data-lang="en">
+      <ul>
+        <li>To save and restore your game progress and settings;</li>
+        <li>To provide achievements and optional sign-in via Google Play Games Services;</li>
+        <li>To display and measure ads (if you use ad features).</li>
+      </ul>
+      <p>We <strong>do not sell</strong> your data.</p>
+    </div>
+  </section>
+
+  <!-- ── 3. Third parties ──────────────────────────────── -->
+  <section>
+    <h2><span data-lang="zh">3. 第三方服務</span><span data-lang="en">3. Third-Party Services</span></h2>
+    <div data-lang="zh">
+      <p>本遊戲使用下列由 Google 提供的服務，其資料處理各自受 Google 隱私權政策約束：</p>
+      <ul>
+        <li>Google Play 遊戲服務（成就、登入）</li>
+        <li>Google AdMob（廣告）</li>
+        <li>Google Play（應用程式散布）</li>
+      </ul>
+      <div class="card">
+        <p style="margin:0;">請參閱 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>
+          以及 <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google 如何在廣告中使用資料</a>。</p>
+      </div>
+    </div>
+    <div data-lang="en">
+      <p>The Game uses the following services provided by Google, each governed by Google’s
+        own privacy policy:</p>
+      <ul>
+        <li>Google Play Games Services (achievements, sign-in)</li>
+        <li>Google AdMob (advertising)</li>
+        <li>Google Play (app distribution)</li>
+      </ul>
+      <div class="card">
+        <p style="margin:0;">See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+          and <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">How Google uses information in ads</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. Children ───────────────────────────────────── -->
+  <section>
+    <h2><span data-lang="zh">4. 兒童隱私</span><span data-lang="en">4. Children’s Privacy</span></h2>
+    <div data-lang="zh">
+      <p>本遊戲並非以 13 歲以下兒童為對象，且我們不會有意蒐集兒童的個人資料。
+        若您認為兒童向我們提供了個人資料，請透過下方聯絡方式與我們聯繫，我們將採取合理步驟移除。</p>
+    </div>
+    <div data-lang="en">
+      <p>The Game is not directed to children under 13, and we do not knowingly collect
+        personal information from children. If you believe a child has provided us with
+        personal information, please contact us using the details below and we will take
+        reasonable steps to remove it.</p>
+    </div>
+  </section>
+
+  <!-- ── 5. Your choices ───────────────────────────────── -->
+  <section>
+    <h2><span data-lang="zh">5. 您的選擇與控制</span><span data-lang="en">5. Your Choices &amp; Controls</span></h2>
+    <div data-lang="zh">
+      <ul>
+        <li>您可在遊戲的「設定」中清除遊戲資料，以刪除裝置上的本機進度。</li>
+        <li>您可在裝置的系統設定中重設或限制廣告 ID（Android：設定 → Google → 廣告）。</li>
+        <li>登入 Google Play 遊戲服務為選用；您可選擇不登入而繼續遊玩。</li>
+        <li>解除安裝本遊戲會移除所有儲存在裝置上的本機資料。</li>
+      </ul>
+    </div>
+    <div data-lang="en">
+      <ul>
+        <li>You can clear game data in the Game’s Settings to delete local progress on your device.</li>
+        <li>You can reset or limit your Advertising ID in your device settings
+          (Android: Settings → Google → Ads).</li>
+        <li>Signing in to Google Play Games Services is optional; you may play without it.</li>
+        <li>Uninstalling the Game removes all locally stored data from your device.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── 6. Changes ────────────────────────────────────── -->
+  <section>
+    <h2><span data-lang="zh">6. 本政策的變更</span><span data-lang="en">6. Changes to This Policy</span></h2>
+    <div data-lang="zh">
+      <p>我們可能會不定期更新本隱私權政策。任何變更將公告於本頁面，並更新上方的「生效日期」。
+        建議您定期查閱本頁面。</p>
+    </div>
+    <div data-lang="en">
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted on
+        this page with an updated “Effective” date above. We encourage you to review this
+        page periodically.</p>
+    </div>
+  </section>
+
+  <!-- ── 7. Contact ────────────────────────────────────── -->
+  <section>
+    <h2><span data-lang="zh">7. 聯絡我們</span><span data-lang="en">7. Contact Us</span></h2>
+    <div data-lang="zh">
+      <p>若您對本隱私權政策有任何疑問，請聯絡：<br>
+        <strong>echohole</strong><br>
+        電子郵件：<a href="mailto:echohole.shawn@gmail.com">echohole.shawn@gmail.com</a></p>
+    </div>
+    <div data-lang="en">
+      <p>If you have any questions about this Privacy Policy, contact:<br>
+        <strong>echohole</strong><br>
+        Email: <a href="mailto:echohole.shawn@gmail.com">echohole.shawn@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <span data-lang="zh">© 2026 echohole · BestSeller - Back To The Top</span>
+    <span data-lang="en">© 2026 echohole · BestSeller - Back To The Top</span>
+  </footer>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.getElementById('btn-zh').classList.toggle('active', lang === 'zh-Hant');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    try { localStorage.setItem('pp-lang', lang); } catch (e) {}
+  }
+  (function () {
+    var saved;
+    try { saved = localStorage.getItem('pp-lang'); } catch (e) {}
+    var nav = (navigator.language || 'en').toLowerCase();
+    var initial = saved || (nav.indexOf('zh') === 0 ? 'zh-Hant' : 'en');
+    setLang(initial);
+  })();
+</script>
+</body>
+</html>
