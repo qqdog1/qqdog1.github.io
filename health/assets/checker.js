@@ -113,13 +113,19 @@ let sampleIdx = 0;
 ta.value = P.samples[0];
 const hint = $("ingrHint");
 
+/* Tells assets/report.js what the last check found, so unlisted ingredients can be reported. */
+const announce = (text, unknown) => document.dispatchEvent(new CustomEvent("health:checked", {
+  detail: { product: PRODUCT, name: P.name, text, unknown, sample: P.samples.includes(text) } }));
+
 function runCheck() {
   const text = ta.value.trim();
   if (!text) {
     result.innerHTML = `<p class="hint" style="margin:0">貼上或掃描成分表後就會自動檢查。也可以按「換一組範例」看看效果。</p>`;
+    announce("", []);
     return;
   }
   const { toks, hits, unknown } = analyze(text);
+  announce(text, unknown);
   const order = hits.slice().sort((a, b) => {
     const av = a.ing.avoid && prefs.has(a.ing.avoid) ? 1 : 0, bv = b.ing.avoid && prefs.has(b.ing.avoid) ? 1 : 0;
     return (bv - av) || (lvOf(b.ing) - lvOf(a.ing));

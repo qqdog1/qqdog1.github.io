@@ -271,3 +271,20 @@ a.item:hover { border-color: var(--accent); }
 .form-card dd { margin: 0; }
 .pill.form { border-color: var(--ink); color: var(--ink); font-weight: 500; }
 #pickTools { margin-top: 18px; }
+
+/* ingredient reports */
+.report-bar { margin-top: 14px; padding: 12px 14px; border: 1px dashed var(--line); border-radius: 10px; background: var(--surface); display: grid; gap: 6px; font-size: 14px; }
+.rb-main { display: flex; gap: 10px 14px; align-items: center; flex-wrap: wrap; justify-content: space-between; }
+.rb-queue, .rb-msg { font-size: 13px; color: var(--muted); }
+.rb-err { color: var(--bad); font-size: 13.5px; margin: 0; }
+dialog.sheet {
+  width: min(560px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 0; border: 1px solid var(--line); border-radius: 12px;
+  background: var(--surface); color: var(--ink); overflow: auto;
+}
+dialog.sheet::backdrop { background: rgba(10, 20, 16, .45); }
+.sheet-body { padding: 16px 22px 22px; display: grid; gap: 8px; }
+.sheet-body label.field { margin: 6px 0 0; }
+.sheet-body textarea { min-height: 96px; }
+.txt { font: inherit; font-size: 16px; width: 100%; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink); }
+.chk { display: flex; gap: 8px; align-items: center; font-size: 14px; }
+.sheet-body .row { margin-top: 8px; justify-content: space-between; }
