@@ -105,11 +105,22 @@
           <label class="field" for="ingr">成分表</label>
           <textarea id="ingr" spellcheck="false" autocomplete="off"></textarea>
           <div class="row" style="margin-top:10px">
-            <button class="btn primary" id="scanBtn" type="button" aria-expanded="false" aria-controls="scanHelp">用手機掃描</button>
+            <button class="btn primary photo" id="photoBtn" type="button">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              拍照辨識
+            </button>
+            <input type="file" id="photoInput" accept="image/*" capture="environment" hidden>
             <button class="btn" id="runBtn" type="button">檢查成分</button>
             <button class="btn" id="sampleBtn" type="button">換一組範例</button>
             <button class="btn" id="clearBtn" type="button">清空</button>
           </div>
+          <div class="ocr" id="ocrStatus" hidden>
+            <img id="ocrThumb" alt="剛拍的成分表照片">
+            <div class="ocr-msg"><span id="ocrText"></span><progress id="ocrBar" max="1" value="0" hidden></progress>
+              <button class="linkish" type="button" id="ocrStop" hidden>停止</button></div>
+          </div>
+          <p class="hint">拍照時讓成分表填滿畫面、保持平整、避免反光。照片只在你的手機上辨識，不會上傳。
+            <button class="linkish" id="scanBtn" type="button" aria-expanded="false" aria-controls="scanHelp">辨識不準？改用手機內建掃描</button></p>
           <div class="scan" id="scanHelp" hidden></div>
           <p class="hint" id="ingrHint">目前載入的是範例成分表，不是特定產品。</p>
 
@@ -179,5 +190,6 @@
 
 <script src="assets/checker.js"></script>
 <script src="assets/report.js"></script>
+<script src="assets/ocr.js"></script>
 </body>
 </html>
