@@ -20,6 +20,7 @@ try {
 const items = c => c.groups.flatMap(g => g.items);
 const item = it => {
   const inner = `<span class="nm">${esc(it.name)}${it.href ? "" : '<span class="badge">整理中</span>'}</span>
+    ${it.forms ? `<span class="meta">${it.forms.map(esc).join("、")}</span>` : ""}
     <span class="meta">${esc(KIND[it.kind])} · ${esc(it.contact)}</span>`;
   return it.href ? `<a class="item" href="${esc(it.href)}">${inner}</a>` : `<div class="item soon">${inner}</div>`;
 };

@@ -127,7 +127,7 @@ function runCheck() {
   const concern = hits.filter(h => lvOf(h.ing) >= 2).length;
   result.innerHTML = `
     ${verdict(judge(hits, prefs))}
-    <div class="tally"><span><b>${toks.length}</b>項成分</span><span><b>${hits.length}</b>項已比對</span><span><b>${concern}</b>項中度以上疑慮</span></div>
+    <div class="tally"><span><b>${toks.length}</b>項成分</span><span><b>${toks.length - unknown.length}</b>項已比對</span><span><b>${concern}</b>項中度以上疑慮</span></div>
     <ul class="found">${order.map(h => {
       const av = h.ing.avoid && prefs.has(h.ing.avoid);
       return `<li class="lv${lvOf(h.ing)}${av ? " avoid" : ""}"><button type="button" data-id="${h.ing.id}">
@@ -200,16 +200,32 @@ $("libSearch").addEventListener("input", renderLib);
 reg.addEventListener("click", e => { const b = e.target.closest("button[data-id]"); if (b) openDetail(b.dataset.id); });
 
 /* ---------- picks ---------- */
+/* Products of one use come in several forms (body wash vs bar soap); `forms` in the product JSON labels them
+   and, when the picks span more than one, adds a filter. */
+const FORMS = P.forms || {};
+let pickForm = "all";
+const pickTools = $("pickTools");
+if (pickTools && new Set(P.picks.map(p => p.form).filter(Boolean)).size > 1) {
+  pickTools.innerHTML = `<div class="seg" role="group" aria-label="依型態篩選">
+    <button type="button" data-form="all" aria-pressed="true">全部</button>
+    ${Object.entries(FORMS).map(([k, v]) => `<button type="button" data-form="${k}" aria-pressed="false">${esc(v)}</button>`).join("")}</div>`;
+  pickTools.addEventListener("click", e => {
+    const b = e.target.closest("button[data-form]"); if (!b) return;
+    pickForm = b.dataset.form;
+    pickTools.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    renderPicks();
+  });
+}
 function renderPicks() {
-  pickBox.innerHTML = P.picks.map(p => {
-    const { toks, hits } = analyze(p.inci);
+  pickBox.innerHTML = P.picks.filter(p => pickForm === "all" || p.form === pickForm).map(p => {
+    const { toks, hits, unknown } = analyze(p.inci);
     const flagged = hits.filter(h => lvOf(h.ing) >= 1 || (h.ing.avoid && prefs.has(h.ing.avoid)))
       .sort((a, b) => lvOf(b.ing) - lvOf(a.ing));
     return `<article class="pick">
       <div><div class="brandline">${esc(p.brand)}</div><h3>${esc(p.name)}</h3></div>
-      <div class="pills">${p.good.map(g => `<span class="pill good">${esc(g)}</span>`).join("")}${p.trade.map(g => `<span class="pill trade">${esc(g)}</span>`).join("")}</div>
+      <div class="pills">${p.form ? `<span class="pill form">${esc([FORMS[p.form], p.type].filter(Boolean).join(" · "))}</span>` : ""}${p.good.map(g => `<span class="pill good">${esc(g)}</span>`).join("")}${p.trade.map(g => `<span class="pill trade">${esc(g)}</span>`).join("")}</div>
       ${verdict(judge(hits, prefs))}
-      <div><div class="fine" style="margin-bottom:6px">需留意的成分（${hits.length}/${toks.length} 項已比對）</div>
+      <div><div class="fine" style="margin-bottom:6px">需留意的成分（${toks.length - unknown.length}/${toks.length} 項已比對）</div>
         <div class="flags">${flagged.map(h => {
           const av = h.ing.avoid && prefs.has(h.ing.avoid);
           return `<button type="button" class="lv${lvOf(h.ing)}${av ? " avoid" : ""}" data-id="${h.ing.id}">${esc(h.ing.zh)}</button>`;

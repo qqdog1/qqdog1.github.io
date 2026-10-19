@@ -257,3 +257,17 @@ a.item:hover { border-color: var(--accent); }
 .badge { font-size: 11.5px; padding: 1px 7px; border-radius: 4px; background: var(--accent); color: var(--surface); margin-left: 6px; vertical-align: 2px; font-weight: 500; }
 .item.soon .badge { background: var(--meter-off); color: var(--muted); }
 .loadfail { padding: 16px; border-radius: 8px; background: var(--human-soft); }
+
+/* form comparison (liquid vs bar) */
+.compare-wrap { margin-top: 30px; }
+.compare-wrap > h3 { font-size: 22px; }
+.compare-wrap > p { margin: 6px 0 0; color: var(--muted); max-width: 66ch; }
+.compare { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 14px; margin-top: 16px; }
+.form-card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; min-width: 0; }
+.form-card h4 { margin: 0; font-size: 17px; }
+.form-card .ex { font-size: 13px; color: var(--muted); margin: 2px 0 10px; }
+.form-card dl { margin: 0; display: grid; gap: 8px; font-size: 14px; }
+.form-card dt { font-size: 12px; font-family: var(--f-mono); letter-spacing: .08em; color: var(--accent); }
+.form-card dd { margin: 0; }
+.pill.form { border-color: var(--ink); color: var(--ink); font-weight: 500; }
+#pickTools { margin-top: 18px; }
