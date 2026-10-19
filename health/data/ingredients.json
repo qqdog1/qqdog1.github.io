@@ -1,0 +1,502 @@
+[
+  {
+    "id": "sls",
+    "zh": "月桂基硫酸鈉",
+    "inci": "Sodium Lauryl Sulfate (SLS)",
+    "avoid": "sls",
+    "aliases": ["sodium lauryl sulfate", "sodium lauryl sulphate", "sls", "月桂基硫酸鈉", "月桂硫酸鈉", "十二烷基硫酸鈉", "十二烷基硫酸钠"],
+    "env": 1,
+    "envT": "在污水處理過程中能被快速生物分解，不易累積。未經處理直接排入水體時，對魚類與水生無脊椎動物有毒性。",
+    "law": "台灣與歐盟皆允許用於牙膏。",
+    "src": [
+      { "t": "SLS 對口腔的影響（牙醫整理）", "u": "https://myprivatedentist.com/best-sls-free-toothpaste/" }
+    ],
+    "by": {
+      "toothpaste": {
+        "role": "起泡劑",
+        "human": 2,
+        "sum": "讓牙膏起泡的界面活性劑，可能刺激口腔黏膜。",
+        "use": "降低表面張力、產生泡沫，幫助牙膏在口中散開。也用在洗髮精、洗碗精。",
+        "hum": "在口腔黏膜上可能造成刺激、乾澀或黏膜脫屑。小型臨床研究發現，容易反覆發生口腔潰瘍的人改用無 SLS 牙膏後，潰瘍與疼痛有所減輕。以一般刷牙用量，未被證實有全身性毒性。"
+      }
+    }
+  },
+  {
+    "id": "sles",
+    "zh": "月桂醇聚醚硫酸酯鈉",
+    "inci": "Sodium Laureth Sulfate (SLES)",
+    "avoid": "sls",
+    "aliases": ["sodium laureth sulfate", "sodium laureth sulphate", "sles", "月桂醇聚醚硫酸酯鈉", "月桂醇醚硫酸鈉", "十二烷基聚氧乙醚硫酸鈉"],
+    "env": 1,
+    "envT": "可生物分解，但分解速度比 SLS 慢；對水生生物有一定毒性。",
+    "law": "台灣與歐盟皆允許使用；歐盟對 1,4-二噁烷殘留有技術上可避免的最低限度要求。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "起泡劑",
+        "human": 1,
+        "sum": "比 SLS 溫和的起泡劑，製程可能殘留微量 1,4-二噁烷。",
+        "use": "與 SLS 相同，用於起泡與清潔。",
+        "hum": "刺激性比 SLS 低。製造時的乙氧基化步驟可能殘留微量 1,4-二噁烷（可能致癌物），殘留量取決於原料純化程度。"
+      }
+    }
+  },
+  {
+    "id": "triclosan",
+    "zh": "三氯沙",
+    "inci": "Triclosan",
+    "avoid": "triclosan",
+    "aliases": ["triclosan", "三氯沙", "三氯生", "三氯新"],
+    "env": 3,
+    "envT": "不易分解，對藻類等水生生物毒性高。衛福部指出，三氯沙與自來水中的餘氯接觸可能產生氯仿，使用後排放的廢水中也可能產生戴奧辛。",
+    "law": "台灣化粧品（含牙膏）添加上限 0.3%。",
+    "src": [
+      { "t": "衛福部：三氯沙說明", "u": "https://www.mohw.gov.tw/cp-16-23638-1.html" }
+    ],
+    "by": {
+      "toothpaste": {
+        "role": "抗菌劑",
+        "human": 2,
+        "sum": "抗菌防腐成分，環境中難分解，可能生成氯仿與戴奧辛。",
+        "use": "抑制細菌生長，過去常見於標榜抗菌、護齦的牙膏。",
+        "hum": "動物研究顯示可能干擾甲狀腺等荷爾蒙。美國 FDA 於 2016 年禁止它用於一般抗菌洗手乳與沐浴乳。台灣主管機關的立場是：在限量範圍內，目前沒有確切證據顯示有害人體。"
+      }
+    }
+  },
+  {
+    "id": "microbeads",
+    "zh": "塑膠微粒（柔珠）",
+    "inci": "Polyethylene · Polypropylene · PET · PMMA · Nylon",
+    "avoid": "plastic",
+    "aliases": ["polyethylene", "polypropylene", "polyethylene terephthalate", "polymethyl methacrylate", "nylon", "聚乙烯", "聚丙烯", "聚對苯二甲酸乙二酯", "聚甲基丙烯酸甲酯", "尼龍", "塑膠微粒", "柔珠"],
+    "env": 3,
+    "envT": "粒徑只有毫米大小，污水處理設施無法過濾，流入水域與海洋後不會自然分解，還會吸附農藥、重金屬等有毒物質，被浮游生物與魚類吃下。",
+    "law": "台灣自 2018 年 1 月 1 日起禁止製造、輸入，2018 年 7 月 1 日起禁止販售含塑膠微粒的牙膏等六類產品。若在新品成分表看到，可向環保局檢舉。",
+    "src": [
+      { "t": "環保署公告塑膠微粒管制（關鍵評論網）", "u": "https://www.thenewslens.com/article/75374" },
+      { "t": "禁售令上路後稽查（中央社）", "u": "https://www.cna.com.tw/news/ahel/201809200289.aspx" }
+    ],
+    "by": {
+      "toothpaste": {
+        "role": "磨砂顆粒",
+        "human": 1,
+        "sum": "污水廠攔不住、在海洋中無法分解的塑膠顆粒。",
+        "use": "作為磨砂或去漬顆粒，也有的只是為了好看的彩色顆粒。",
+        "hum": "對刷牙的人直接風險低，主要風險是透過海鮮回到人類的食物鏈。"
+      }
+    }
+  },
+  {
+    "id": "tio2",
+    "zh": "二氧化鈦",
+    "inci": "Titanium Dioxide · CI 77891",
+    "avoid": "tio2",
+    "aliases": ["titanium dioxide", "ci 77891", "ci77891", "77891", "二氧化鈦", "二氧化钛", "pigment white 6"],
+    "env": 1,
+    "envT": "奈米級顆粒進入水體後，對水生生物的長期影響仍在研究中。",
+    "law": "截至本頁整理時，台灣與歐盟仍允許用於牙膏。",
+    "src": [
+      {
+        "t": "AOK：牙膏中的二氧化鈦有多危險（德文）",
+        "u": "https://www.aok.de/pk/magazin/koerper-psyche/zaehne/titandioxid-in-zahnpasta-und-arzneien-was-man-ueber-das-risiko-weiss/"
+      }
+    ],
+    "by": {
+      "toothpaste": {
+        "role": "白色色素",
+        "human": 2,
+        "sum": "只為了讓牙膏更白，歐盟已禁止用於食品。",
+        "use": "白色顏料，讓牙膏呈現不透明的亮白色，沒有清潔功能。",
+        "hum": "歐盟 2022 年起禁止 E171（食品級二氧化鈦）用於食品，理由是無法排除基因毒性。歐盟消費者安全科學委員會（SCCS）重新評估後也認為，會從口腔進入的化粧品無法排除這項疑慮。刷牙會吞入少量，但遠低於食品攝取量。"
+      }
+    }
+  },
+  {
+    "id": "blue1",
+    "zh": "亮藍（藍色 1 號）",
+    "inci": "CI 42090 · Brilliant Blue FCF",
+    "avoid": "dyes",
+    "aliases": ["ci 42090", "ci42090", "42090", "brilliant blue", "blue 1", "fd&c blue no. 1", "亮藍", "食用藍色1號", "藍色1號", "藍色一號"],
+    "env": 2,
+    "envT": "屬三苯甲烷類合成染料，結構穩定，一般污水處理不易將它生物分解。它只為外觀而存在，卻增加了廢水的色度與處理負擔。",
+    "law": "台灣與歐盟皆允許用於牙膏。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "人工色素",
+        "human": 1,
+        "sum": "藍色條紋常用的合成染料，在水中不易分解。",
+        "use": "讓牙膏或凝膠呈現藍色、做出條紋。",
+        "hum": "腸道吸收量極少，一般認為低風險；極少數人可能過敏。"
+      }
+    }
+  },
+  {
+    "id": "yellow5",
+    "zh": "檸檬黃（黃色 4 號）",
+    "inci": "CI 19140 · Tartrazine",
+    "avoid": "dyes",
+    "aliases": ["ci 19140", "ci19140", "19140", "tartrazine", "yellow 5", "fd&c yellow no. 5", "檸檬黃", "食用黃色4號", "黃色4號", "黃色四號"],
+    "env": 2,
+    "envT": "屬偶氮染料，難以被一般污水處理分解；在缺氧環境（例如底泥）中可能被分解成芳香胺，部分芳香胺具毒性。",
+    "law": "台灣與歐盟皆允許用於牙膏；歐盟食品需標示警語。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "人工色素",
+        "human": 2,
+        "sum": "偶氮染料，少數人過敏，與兒童過動研究有關。",
+        "use": "調出黃色或綠色（與藍色混用）。",
+        "hum": "少數人會出現過敏或不耐反應（如蕁麻疹）。英國 2007 年的研究發現，含此類色素的混合物可能與部分兒童過動行為有關，歐盟因此要求含這類色素的食品加註警語。"
+      }
+    }
+  },
+  {
+    "id": "pb15",
+    "zh": "酞菁藍",
+    "inci": "CI 74160 · Pigment Blue 15",
+    "avoid": "dyes",
+    "aliases": ["ci 74160", "ci74160", "74160", "pigment blue 15", "酞菁藍", "銅酞菁"],
+    "env": 2,
+    "envT": "化學結構非常穩定、含銅，在環境中幾乎不分解，會隨污泥累積。",
+    "law": "台灣與歐盟皆允許用於化粧品。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "人工色素",
+        "human": 1,
+        "sum": "含銅的藍色顏料，極穩定，幾乎不分解。",
+        "use": "藍色顆粒或條紋的顏料。",
+        "hum": "不溶於水，口腔與腸道吸收很少，一般認為低風險。"
+      }
+    }
+  },
+  {
+    "id": "saccharin",
+    "zh": "糖精鈉",
+    "inci": "Sodium Saccharin",
+    "avoid": "sweet",
+    "aliases": ["sodium saccharin", "saccharin", "糖精鈉", "糖精"],
+    "env": 1,
+    "envT": "污水處理中大部分可被去除，但在部分河川與地下水仍可檢出，是常被用來追蹤生活污水的指標物質之一。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "甜味劑",
+        "human": 1,
+        "sum": "人工甜味劑，早年的致癌疑慮已被排除。",
+        "use": "讓牙膏有甜味但不提供蛀牙菌養分。",
+        "hum": "1970 年代大鼠實驗曾引發膀胱癌疑慮，後來確認致病機制不適用於人類，美國 2000 年已將它從致癌物清單移除。仍想避開人工甜味劑的人可選木糖醇或甜菊配方。"
+      }
+    }
+  },
+  {
+    "id": "paraben",
+    "zh": "對羥基苯甲酸酯類",
+    "inci": "Methylparaben · Propylparaben …",
+    "avoid": "paraben",
+    "aliases": ["paraben", "對羥基苯甲酸", "尼泊金", "羥苯甲酯", "羥苯丙酯"],
+    "env": 1,
+    "envT": "多數可在污水處理中分解，但在河川中仍可檢出。",
+    "law": "台灣與歐盟對各種 paraben 分別訂有限量或禁用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "防腐劑",
+        "human": 2,
+        "sum": "防腐劑，有微弱類雌激素活性。",
+        "use": "防止產品開封後滋生細菌與黴菌。",
+        "hum": "具微弱的類雌激素活性。歐盟 2014 年禁用其中五種（異丙基、異丁基、苯基、苄基、戊基），並對丙基、丁基設較嚴的限量；甲基、乙基一般認為風險較低。"
+      }
+    }
+  },
+  {
+    "id": "peg",
+    "zh": "聚乙二醇（PEG）",
+    "inci": "PEG-6 · PEG-8 · PEG-12 …",
+    "aliases": ["peg-", "peg ", "polyethylene glycol", "聚乙二醇"],
+    "env": 1,
+    "envT": "分子量越大越難被生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "保濕／溶劑",
+        "human": 1,
+        "sum": "本身毒性低，品質差的原料可能殘留環氧乙烷。",
+        "use": "保濕、讓質地均勻、幫助香料溶解。",
+        "hum": "本身毒性低。製造時可能殘留微量環氧乙烷與 1,4-二噁烷，取決於原料純化程度。"
+      }
+    }
+  },
+  {
+    "id": "fluoride",
+    "zh": "氟化物",
+    "inci": "Sodium Fluoride · Sodium Monofluorophosphate · Stannous Fluoride",
+    "avoid": "fluoride",
+    "aliases": ["sodium fluoride", "sodium monofluorophosphate", "stannous fluoride", "amine fluoride", "fluoride", "氟化鈉", "單氟磷酸鈉", "氟化亞錫", "氟化物"],
+    "env": 0,
+    "envT": "以一般用量排放，對環境影響低。",
+    "law": "台灣非藥用牙膏總含氟量須在 1500 ppm 以下。",
+    "src": [
+      {
+        "t": "台北市法規附件：牙膏成分宣稱詞句（含氟量）",
+        "u": "https://www.laws.taipei.gov.tw/lawatt/Law/A040170040008400-20190604-4000-002.pdf"
+      }
+    ],
+    "by": {
+      "toothpaste": {
+        "role": "防蛀活性成分",
+        "human": 1,
+        "benefit": true,
+        "sum": "預防蛀牙最有實證的成分；兒童須注意用量。",
+        "use": "幫助琺瑯質再礦化、抵抗酸蝕，是預防蛀牙的主力成分。",
+        "hum": "世界衛生組織認定為預防蛀牙最有效的工具之一，成人牙膏含氟約 1000–1450 ppm 才有實質效果。主要風險是幼兒長期吞入過量造成氟斑牙，因此 6 歲以下用米粒到豌豆大小、在大人陪同下使用。選擇無氟牙膏前，建議先和牙醫討論自己的蛀牙風險。"
+      }
+    }
+  },
+  {
+    "id": "carrageenan",
+    "zh": "鹿角菜膠",
+    "inci": "Carrageenan",
+    "aliases": ["carrageenan", "鹿角菜膠", "卡拉膠"],
+    "env": 0,
+    "envT": "海藻來源，可生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "增稠劑",
+        "human": 0,
+        "sum": "海藻來源的增稠劑。",
+        "use": "讓牙膏成形、不分層。",
+        "hum": "食品級鹿角菜膠一般認為安全。網路上的爭議多半來自「降解鹿角菜膠」，那是不同的物質，不用於食品與牙膏。"
+      }
+    }
+  },
+  {
+    "id": "capb",
+    "zh": "椰油醯胺丙基甜菜鹼",
+    "inci": "Cocamidopropyl Betaine",
+    "aliases": ["cocamidopropyl betaine", "椰油醯胺丙基甜菜鹼", "椰油酰胺丙基甜菜碱"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "溫和起泡劑",
+        "human": 1,
+        "sum": "常見的 SLS 替代起泡劑，溫和但少數人過敏。",
+        "use": "無 SLS 牙膏常用它來起泡。",
+        "hum": "刺激性低。少數人會有接觸性過敏，多與製程雜質有關。"
+      }
+    }
+  },
+  {
+    "id": "glucoside",
+    "zh": "月桂基葡糖苷",
+    "inci": "Lauryl Glucoside",
+    "aliases": ["lauryl glucoside", "coco-glucoside", "decyl glucoside", "月桂基葡糖苷", "椰油基葡糖苷", "癸基葡糖苷"],
+    "env": 0,
+    "envT": "容易生物分解，對水生生物毒性低。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "溫和起泡劑", "human": 0, "sum": "由椰子油與葡萄糖製成的溫和起泡劑。", "use": "天然取向牙膏常用的起泡劑。", "hum": "刺激性很低。" }
+    }
+  },
+  {
+    "id": "flavor",
+    "zh": "香料",
+    "inci": "Flavor · Aroma",
+    "aliases": ["flavor", "flavour", "aroma", "香料", "香精", "薄荷香料"],
+    "env": 0,
+    "envT": "用量少，影響低。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "風味",
+        "human": 1,
+        "sum": "提供薄荷等風味，少數人會過敏。",
+        "use": "讓口氣清新、掩蓋其他成分的味道。",
+        "hum": "通常是薄荷油、薄荷醇等的混合物，成分表多半不會列出細項。少數人對肉桂醛、薄荷等成分過敏。"
+      }
+    }
+  },
+  {
+    "id": "limonene",
+    "zh": "檸檬烯",
+    "inci": "Limonene",
+    "aliases": ["limonene", "檸檬烯", "柠檬烯"],
+    "env": 1,
+    "envT": "可生物分解，但對水生生物有毒性。",
+    "law": "歐盟要求在成分表中單獨標示。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "香氣成分",
+        "human": 1,
+        "sum": "精油中的天然香氣成分，屬於需標示的致敏香料。",
+        "use": "來自柑橘或薄荷精油的香氣成分。",
+        "hum": "氧化後可能引起皮膚過敏，歐盟將它列為超過一定濃度須單獨標示的致敏香料。"
+      }
+    }
+  },
+  {
+    "id": "silica",
+    "zh": "水合二氧化矽",
+    "inci": "Hydrated Silica",
+    "aliases": ["hydrated silica", "silica", "水合二氧化矽", "二氧化矽", "水合矽石"],
+    "exactAliases": ["silica"],
+    "env": 0,
+    "envT": "與沙子相同成分，影響低。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "研磨劑", "human": 0, "sum": "最常見的溫和研磨劑。", "use": "去除牙菌斑與表面色素。", "hum": "非結晶型二氧化矽，口腔使用安全。" }
+    }
+  },
+  {
+    "id": "caco3",
+    "zh": "碳酸鈣",
+    "inci": "Calcium Carbonate",
+    "aliases": ["calcium carbonate", "碳酸鈣"],
+    "env": 0,
+    "envT": "與石灰岩相同成分，影響低。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [
+      { "t": "食藥署：牙膏重金屬限量（TVBS）", "u": "https://health.tvbs.com.tw/life/354409" }
+    ],
+    "by": {
+      "toothpaste": {
+        "role": "研磨劑",
+        "human": 0,
+        "sum": "天然礦物研磨劑。",
+        "use": "去除牙菌斑與表面汙漬。",
+        "hum": "安全。天然礦物來源可能帶微量重金屬，台灣規定牙膏鉛含量不得超過 10 ppm。"
+      }
+    }
+  },
+  {
+    "id": "glycerin",
+    "zh": "甘油",
+    "inci": "Glycerin",
+    "aliases": ["glycerin", "glycerine", "glycerol", "甘油", "丙三醇"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "保濕劑", "human": 0, "sum": "保濕，防止牙膏變乾。", "use": "保持牙膏濕潤、口感滑順。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "sorbitol",
+    "zh": "山梨糖醇",
+    "inci": "Sorbitol",
+    "aliases": ["sorbitol", "山梨糖醇", "山梨醇"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "保濕／甜味", "human": 0, "sum": "保濕兼甜味，不易被蛀牙菌利用。", "use": "保濕並帶淡淡甜味。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "xylitol",
+    "zh": "木糖醇",
+    "inci": "Xylitol",
+    "aliases": ["xylitol", "木糖醇"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "甜味劑",
+        "human": 0,
+        "benefit": true,
+        "sum": "天然甜味劑，蛀牙菌無法利用。",
+        "use": "提供甜味，並有助減少牙菌斑。",
+        "hum": "安全。注意木糖醇對狗有毒，牙膏請放在寵物拿不到的地方。"
+      }
+    }
+  },
+  {
+    "id": "thickener",
+    "zh": "纖維素類增稠劑",
+    "inci": "Cellulose Gum · Microcrystalline Cellulose",
+    "aliases": ["cellulose gum", "sodium carboxymethylcellulose", "carboxymethylcellulose", "microcrystalline cellulose", "纖維素膠", "羧甲基纖維素鈉", "微晶纖維素"],
+    "env": 0,
+    "envT": "可生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "增稠劑", "human": 0, "sum": "植物纖維來源的增稠劑。", "use": "讓牙膏成形。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "xanthan",
+    "zh": "三仙膠",
+    "inci": "Xanthan Gum",
+    "aliases": ["xanthan gum", "xanthan", "三仙膠", "黃原膠", "黄原胶"],
+    "env": 0,
+    "envT": "可生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "增稠劑", "human": 0, "sum": "微生物發酵製成的增稠劑。", "use": "讓牙膏成形。", "hum": "安全，也用於食品。" }
+    }
+  },
+  {
+    "id": "kno3",
+    "zh": "硝酸鉀",
+    "inci": "Potassium Nitrate",
+    "aliases": ["potassium nitrate", "硝酸鉀"],
+    "env": 0,
+    "envT": "用量少，影響低。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "抗敏感成分",
+        "human": 0,
+        "benefit": true,
+        "sum": "舒緩牙齒敏感。",
+        "use": "鉀離子能降低牙本質神經對冷熱的反應。",
+        "hum": "在牙膏用量下安全。"
+      }
+    }
+  },
+  {
+    "id": "naoh",
+    "zh": "氫氧化鈉",
+    "inci": "Sodium Hydroxide",
+    "aliases": ["sodium hydroxide", "氫氧化鈉"],
+    "env": 0,
+    "envT": "影響低。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "酸鹼調整", "human": 0, "sum": "微量調整酸鹼值。", "use": "把配方調到接近中性。", "hum": "用量極少且已被中和，不殘留強鹼。" }
+    }
+  },
+  {
+    "id": "water",
+    "zh": "水",
+    "inci": "Water · Aqua",
+    "aliases": [],
+    "exactAliases": ["water", "aqua", "water (aqua)", "aqua (water)", "水", "純水", "去離子水"],
+    "env": 0,
+    "envT": "無。",
+    "law": "—",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "基底", "human": 0, "sum": "基底。", "use": "溶解其他成分。", "hum": "安全。" }
+    }
+  }
+]

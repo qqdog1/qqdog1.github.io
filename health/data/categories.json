@@ -1,0 +1,100 @@
+[
+  {
+    "key": "bath", "name": "衛浴", "href": "bath.html",
+    "blurb": "牙膏、洗髮精、沐浴乳……每天直接抹在身上、最後沖進排水孔的東西。",
+    "groups": [
+      {
+        "name": "口腔", "blurb": "接觸口腔黏膜，也可能被吞下。",
+        "items": [
+          { "key": "toothpaste", "name": "牙膏", "kind": "ingredients", "contact": "口腔黏膜 · 每天兩次", "href": "toothpaste.html" },
+          { "key": "mouthwash", "name": "漱口水", "kind": "ingredients", "contact": "口腔黏膜" },
+          { "key": "toothbrush", "name": "牙刷", "kind": "material", "contact": "口腔 · 每天兩次" },
+          { "key": "floss", "name": "牙線", "kind": "material", "contact": "牙齦" },
+          { "key": "cup", "name": "漱口杯", "kind": "material", "contact": "口腔 · 潮濕環境" }
+        ]
+      },
+      {
+        "name": "頭髮", "blurb": "接觸頭皮，用完沖掉。",
+        "items": [
+          { "key": "shampoo", "name": "洗髮精", "kind": "ingredients", "contact": "頭皮 · 沖掉型" },
+          { "key": "conditioner", "name": "潤髮乳", "kind": "ingredients", "contact": "頭髮 · 沖掉型" }
+        ]
+      },
+      {
+        "name": "臉部與身體", "blurb": "沖掉型與留在皮膚上的產品，接觸時間差很多。",
+        "items": [
+          { "key": "facewash", "name": "洗面乳", "kind": "ingredients", "contact": "臉部皮膚 · 沖掉型" },
+          { "key": "bodywash", "name": "沐浴乳", "kind": "ingredients", "contact": "全身皮膚 · 沖掉型" },
+          { "key": "lotion", "name": "乳液", "kind": "ingredients", "contact": "皮膚 · 留在身上" },
+          { "key": "sunscreen", "name": "防曬乳", "kind": "ingredients", "contact": "皮膚 · 留在身上" }
+        ]
+      },
+      {
+        "name": "浴室設備", "blurb": "沒有成分表，要看材質。",
+        "items": [
+          { "key": "showerhead", "name": "蓮蓬頭", "kind": "material", "contact": "水質 · 每天" },
+          { "key": "curtain", "name": "浴簾", "kind": "material", "contact": "潮濕環境" },
+          { "key": "towel", "name": "毛巾", "kind": "material", "contact": "皮膚 · 每天" }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "food", "name": "飲食",
+    "blurb": "裝食物、煮食物、喝水用的器具，會不會溶出東西到食物裡。",
+    "groups": [
+      {
+        "name": "廚房與餐具", "blurb": "",
+        "items": [
+          { "key": "container", "name": "保鮮盒", "kind": "material", "contact": "食物 · 可能加熱" },
+          { "key": "pan", "name": "不沾鍋", "kind": "material", "contact": "食物 · 高溫" },
+          { "key": "board", "name": "砧板", "kind": "material", "contact": "食物" },
+          { "key": "bottle", "name": "水壺與保溫瓶", "kind": "material", "contact": "飲水 · 每天" }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "clothing", "name": "穿著",
+    "blurb": "長時間貼著皮膚的布料，以及洗衣時掉出來的纖維。",
+    "groups": [
+      {
+        "name": "衣物", "blurb": "",
+        "items": [
+          { "key": "underwear", "name": "內衣褲", "kind": "material", "contact": "皮膚 · 整天" },
+          { "key": "sportswear", "name": "機能衣", "kind": "material", "contact": "皮膚 · 流汗時" },
+          { "key": "raincoat", "name": "防水外套", "kind": "material", "contact": "皮膚" }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "cleaning", "name": "居家清潔",
+    "blurb": "洗碗、洗衣、刷浴室的清潔劑，碰到手也碰到餐具與衣服。",
+    "groups": [
+      {
+        "name": "清潔劑", "blurb": "",
+        "items": [
+          { "key": "dishsoap", "name": "洗碗精", "kind": "ingredients", "contact": "雙手 · 殘留在餐具" },
+          { "key": "laundry", "name": "洗衣精", "kind": "ingredients", "contact": "殘留在衣物" },
+          { "key": "softener", "name": "柔軟精", "kind": "ingredients", "contact": "殘留在衣物 · 香料" },
+          { "key": "bathcleaner", "name": "浴廁清潔劑", "kind": "ingredients", "contact": "雙手 · 吸入" }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "living", "name": "居家環境",
+    "blurb": "看不見但會吸進去的東西：香氛、殺蟲劑、寢具。",
+    "groups": [
+      {
+        "name": "空氣與寢具", "blurb": "",
+        "items": [
+          { "key": "fragrance", "name": "芳香劑與香氛蠟燭", "kind": "ingredients", "contact": "吸入" },
+          { "key": "insecticide", "name": "殺蟲劑與蚊香", "kind": "ingredients", "contact": "吸入" },
+          { "key": "bedding", "name": "寢具", "kind": "material", "contact": "皮膚 · 每晚" }
+        ]
+      }
+    ]
+  }
+]
