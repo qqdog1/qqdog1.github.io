@@ -1,6 +1,6 @@
 # health：日用品成分檢查站
 
-純靜態頁面，不需要建置。所有成分比對都在瀏覽器裡完成，照片與文字不會上傳。
+純靜態頁面，不需要建置。拍照辨識與成分比對都在瀏覽器裡完成，照片與文字不會上傳。
 
 ## 結構
 
@@ -11,6 +11,9 @@ toothpaste.html           產品頁：<body data-product="toothpaste">，科普�
 assets/site.css           共用樣式
 assets/catalog.js         首頁與分類頁
 assets/checker.js         產品頁：成分檢查、成分資料庫、推薦
+assets/ocr.js             拍照辨識：在瀏覽器內用 Tesseract 辨識成分表，照片不上傳
+assets/report.js          回報未收錄成分到 Gist（token 只存在使用者的瀏覽器）
+lib/tesseract/            Tesseract.js、辨識引擎、繁中與英文模型（自架，不依賴 CDN；版本見 VERSIONS.txt）
 data/categories.json      分類 → 小組 → 產品；沒有 href 的產品顯示「整理中」
 data/ingredients.json     全站共用成分資料庫
 data/products/<key>.json  單一產品的避開選項、範例成分表、推薦清單

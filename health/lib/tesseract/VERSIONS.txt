@@ -1,0 +1,2 @@
+tesseract.js 6.0.1, tesseract.js-core 6.1.2 (simd-lstm + lstm builds), @tesseract.js-data chi_tra/eng 1.0.0 (4.0.0_best_int).
+Copied from npm so OCR runs from this site with no third-party CDN.

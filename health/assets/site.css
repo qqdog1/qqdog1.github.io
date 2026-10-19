@@ -288,3 +288,13 @@ dialog.sheet::backdrop { background: rgba(10, 20, 16, .45); }
 .txt { font: inherit; font-size: 16px; width: 100%; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink); }
 .chk { display: flex; gap: 8px; align-items: center; font-size: 14px; }
 .sheet-body .row { margin-top: 8px; justify-content: space-between; }
+
+/* photo OCR */
+.btn.photo { display: inline-flex; align-items: center; gap: 6px; }
+.btn:disabled { opacity: .55; pointer-events: none; }
+.ocr { display: flex; gap: 12px; align-items: center; margin-top: 12px; padding: 10px; border-radius: 8px; background: var(--accent-soft); font-size: 13.5px; }
+.ocr img { width: 56px; height: 56px; object-fit: cover; border-radius: 6px; flex: none; }
+.ocr-msg { min-width: 0; flex: 1; display: grid; gap: 6px; justify-items: start; }
+.ocr progress { width: 100%; height: 6px; accent-color: var(--accent); }
+.ocr.err { background: var(--human-soft); }
+.tag.near { background: var(--warn); color: var(--surface); }

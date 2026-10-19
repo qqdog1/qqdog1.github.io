@@ -64,14 +64,48 @@ function matchToken(tok) {
   }
   return best;
 }
+/* Photo text recognition misreads a character here and there (單氟磷酸鈉 → 單氣磷酸鈉, Glycerin → Glycerln).
+   For a token nothing matched, accept the closest alias within a small edit distance and mark it as a guess,
+   so the reader can confirm it against the package. Short names are too easy to confuse, so they never guess. */
+function editDistance(a, b, max) {
+  if (Math.abs(a.length - b.length) > max) return max + 1;
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    let low = i;
+    for (let j = 1; j <= b.length; j++) {
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      low = Math.min(low, cur[j]);
+    }
+    if (low > max) return max + 1;
+    prev = cur;
+  }
+  return prev[b.length];
+}
+function nearToken(tok) {
+  const t = stripParen(tok).replace(/[\d.%]+/g, " ").replace(/\s+/g, " ").trim();
+  const han = /\p{Script=Han}/u.test(t);
+  if (t.length < (han ? 4 : 6)) return null;
+  const max = han ? (t.length >= 8 ? 2 : 1) : Math.max(1, Math.floor(t.length / 7));
+  let best = null, bestD = max + 1;
+  for (const ing of DB) {
+    for (const a of [...ing.aliases, ...ing.exactAliases]) {
+      if (a.length < (han ? 4 : 6)) continue;
+      const d = editDistance(t, a, max);
+      if (d < bestD) { best = ing; bestD = d; }
+    }
+  }
+  return best;
+}
 function analyze(text) {
   const toks = tokenize(text);
   const hits = []; const seen = new Set(); const unknown = [];
   for (const t of toks) {
-    const m = matchToken(t);
+    let m = matchToken(t), near = false;
+    if (!m) { m = nearToken(t); near = !!m; }
     if (!m) { unknown.push(t); continue; }
     if (seen.has(m.id)) continue;
-    seen.add(m.id); hits.push({ ing: m, raw: t });
+    seen.add(m.id); hits.push({ ing: m, raw: t, near });
   }
   return { toks, hits, unknown };
 }
@@ -137,7 +171,7 @@ function runCheck() {
     <ul class="found">${order.map(h => {
       const av = h.ing.avoid && prefs.has(h.ing.avoid);
       return `<li class="lv${lvOf(h.ing)}${av ? " avoid" : ""}"><button type="button" data-id="${h.ing.id}">
-        <span class="nm">${esc(h.ing.zh)}${av ? '<span class="tag avoid">你想避開</span>' : ""}${h.ing.benefit ? '<span class="tag benefit">有益成分</span>' : ""}</span>
+        <span class="nm">${esc(h.ing.zh)}${av ? '<span class="tag avoid">你想避開</span>' : ""}${h.ing.benefit ? '<span class="tag benefit">有益成分</span>' : ""}${h.near ? '<span class="tag near">字有出入，請確認</span>' : ""}</span>
         <span class="meters">${meter("h", h.ing.human)}${meter("e", h.ing.env)}</span>
         <span class="src">${esc(h.raw)}</span></button></li>`;
     }).join("")}</ul>
