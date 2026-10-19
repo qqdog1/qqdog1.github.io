@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "sls",
+    "zh": "月桂基硫酸鈉",
+    "inci": "Sodium Lauryl Sulfate (SLS)",
+    "avoid": "sls",
+    "aliases": ["sodium lauryl sulfate", "sodium lauryl sulphate", "sls", "月桂基硫酸鈉", "月桂硫酸鈉", "十二烷基硫酸鈉", "十二烷基硫酸钠", "ammonium lauryl sulfate", "月桂基硫酸銨"],
+    "env": 1,
+    "envT": "在污水處理過程中能被快速生物分解，不易累積。未經處理直接排入水體時，對魚類與水生無脊椎動物有毒性。",
+    "law": "台灣與歐盟皆允許用於牙膏。",
+    "src": [
+      { "t": "SLS 對口腔的影響（牙醫整理）", "u": "https://myprivatedentist.com/best-sls-free-toothpaste/" }
+    ],
+    "by": {
+      "toothpaste": {
+        "role": "起泡劑",
+        "human": 2,
+        "sum": "讓牙膏起泡的界面活性劑，可能刺激口腔黏膜。",
+        "use": "降低表面張力、產生泡沫，幫助牙膏在口中散開。也用在洗髮精、洗碗精。",
+        "hum": "在口腔黏膜上可能造成刺激、乾澀或黏膜脫屑。小型臨床研究發現，容易反覆發生口腔潰瘍的人改用無 SLS 牙膏後，潰瘍與疼痛有所減輕。以一般刷牙用量，未被證實有全身性毒性。"
+      },
+      "bodywash": {
+        "role": "起泡劑",
+        "human": 1,
+        "sum": "強力起泡清潔劑，乾性與敏感肌可能覺得乾澀。",
+        "use": "產生豐富泡沫、洗去油脂。月桂基硫酸銨（ALS）性質相近。",
+        "hum": "沖洗型產品接觸時間短，一般皮膚可以接受；但它去脂力強，會帶走皮膚表面的油脂，皮膚乾、有異位性皮膚炎或濕疹的人較容易出現乾癢與刺激。"
+      }
+    }
+  },
+  {
+    "id": "sles",
+    "zh": "月桂醇聚醚硫酸酯鈉",
+    "inci": "Sodium Laureth Sulfate (SLES)",
+    "avoid": "sls",
+    "aliases": ["sodium laureth sulfate", "sodium laureth sulphate", "sles", "月桂醇聚醚硫酸酯鈉", "月桂醇醚硫酸鈉", "十二烷基聚氧乙醚硫酸鈉", "ammonium laureth sulfate", "月桂醇聚醚硫酸酯銨"],
+    "env": 1,
+    "envT": "可生物分解，但分解速度比 SLS 慢；對水生生物有一定毒性。",
+    "law": "台灣與歐盟皆允許使用；歐盟對 1,4-二噁烷殘留有技術上可避免的最低限度要求。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "起泡劑",
+        "human": 1,
+        "sum": "比 SLS 溫和的起泡劑，製程可能殘留微量 1,4-二噁烷。",
+        "use": "與 SLS 相同，用於起泡與清潔。",
+        "hum": "刺激性比 SLS 低。製造時的乙氧基化步驟可能殘留微量 1,4-二噁烷（可能致癌物），殘留量取決於原料純化程度。"
+      },
+      "bodywash": {
+        "role": "起泡劑",
+        "human": 1,
+        "sum": "沐浴乳最常見的起泡劑，比 SLS 溫和，可能殘留微量 1,4-二噁烷。",
+        "use": "沐浴乳的主要清潔成分，通常搭配椰油醯胺丙基甜菜鹼讓泡沫更細緻。",
+        "hum": "刺激性比 SLS 低。製造時的乙氧基化步驟可能殘留微量 1,4-二噁烷（可能致癌物），殘留量取決於原料純化程度，沖洗型產品的接觸量很低。"
+      }
+    }
+  },
+  {
+    "id": "triclosan",
+    "zh": "三氯沙",
+    "inci": "Triclosan",
+    "avoid": "triclosan",
+    "aliases": ["triclosan", "三氯沙", "三氯生", "三氯新"],
+    "env": 3,
+    "envT": "不易分解，對藻類等水生生物毒性高。衛福部指出，三氯沙與自來水中的餘氯接觸可能產生氯仿，使用後排放的廢水中也可能產生戴奧辛。",
+    "law": "台灣化粧品（含牙膏）添加上限 0.3%。",
+    "src": [
+      { "t": "衛福部：三氯沙說明", "u": "https://www.mohw.gov.tw/cp-16-23638-1.html" }
+    ],
+    "by": {
+      "toothpaste": {
+        "role": "抗菌劑",
+        "human": 2,
+        "sum": "抗菌防腐成分，環境中難分解，可能生成氯仿與戴奧辛。",
+        "use": "抑制細菌生長，過去常見於標榜抗菌、護齦的牙膏。",
+        "hum": "動物研究顯示可能干擾甲狀腺等荷爾蒙。美國 FDA 於 2016 年禁止它用於一般抗菌洗手乳與沐浴乳。台灣主管機關的立場是：在限量範圍內，目前沒有確切證據顯示有害人體。"
+      },
+      "bodywash": {
+        "role": "抗菌劑",
+        "human": 2,
+        "sum": "抗菌成分，美國已禁用於一般抗菌沐浴產品。",
+        "use": "標榜「抗菌」「除菌」的沐浴乳與香皂常見。",
+        "hum": "美國 FDA 於 2016 年禁止三氯沙、三氯卡班等 19 種成分用於一般消費者的抗菌洗手與沐浴產品，理由是沒有證據顯示它們比一般肥皂加清水更能預防疾病，且長期使用的安全性（荷爾蒙干擾、細菌抗藥性）沒有被證實。日常清潔用一般肥皂就足夠。"
+      }
+    }
+  },
+  {
+    "id": "microbeads",
+    "zh": "塑膠微粒（柔珠）",
+    "inci": "Polyethylene · Polypropylene · PET · PMMA · Nylon",
+    "avoid": "plastic",
+    "aliases": ["polyethylene", "polypropylene", "polyethylene terephthalate", "polymethyl methacrylate", "nylon", "聚乙烯", "聚丙烯", "聚對苯二甲酸乙二酯", "聚甲基丙烯酸甲酯", "尼龍", "塑膠微粒", "柔珠"],
+    "env": 3,
+    "envT": "粒徑只有毫米大小，污水處理設施無法過濾，流入水域與海洋後不會自然分解，還會吸附農藥、重金屬等有毒物質，被浮游生物與魚類吃下。",
+    "law": "台灣自 2018 年 1 月 1 日起禁止製造、輸入，2018 年 7 月 1 日起禁止販售含塑膠微粒的牙膏等六類產品。若在新品成分表看到，可向環保局檢舉。",
+    "src": [
+      { "t": "環保署公告塑膠微粒管制（關鍵評論網）", "u": "https://www.thenewslens.com/article/75374" },
+      { "t": "禁售令上路後稽查（中央社）", "u": "https://www.cna.com.tw/news/ahel/201809200289.aspx" }
+    ],
+    "by": {
+      "toothpaste": {
+        "role": "磨砂顆粒",
+        "human": 1,
+        "sum": "污水廠攔不住、在海洋中無法分解的塑膠顆粒。",
+        "use": "作為磨砂或去漬顆粒，也有的只是為了好看的彩色顆粒。",
+        "hum": "對刷牙的人直接風險低，主要風險是透過海鮮回到人類的食物鏈。"
+      },
+      "bodywash": {
+        "role": "磨砂顆粒",
+        "human": 0,
+        "sum": "磨砂沐浴乳裡的塑膠顆粒，台灣已禁用。",
+        "use": "去角質的磨砂顆粒。",
+        "hum": "對使用者直接風險低，主要風險是透過海鮮回到人類的食物鏈。可以改用核桃殼粉、杏桃核粉、糖或鹽等天然磨砂顆粒。"
+      }
+    }
+  },
+  {
+    "id": "tio2",
+    "zh": "二氧化鈦",
+    "inci": "Titanium Dioxide · CI 77891",
+    "avoid": "tio2",
+    "aliases": ["titanium dioxide", "ci 77891", "ci77891", "77891", "二氧化鈦", "二氧化钛", "pigment white 6"],
+    "env": 1,
+    "envT": "奈米級顆粒進入水體後，對水生生物的長期影響仍在研究中。",
+    "law": "截至本頁整理時，台灣與歐盟仍允許用於牙膏。",
+    "src": [
+      {
+        "t": "AOK：牙膏中的二氧化鈦有多危險（德文）",
+        "u": "https://www.aok.de/pk/magazin/koerper-psyche/zaehne/titandioxid-in-zahnpasta-und-arzneien-was-man-ueber-das-risiko-weiss/"
+      }
+    ],
+    "by": {
+      "toothpaste": {
+        "role": "白色色素",
+        "human": 2,
+        "sum": "只為了讓牙膏更白，歐盟已禁止用於食品。",
+        "use": "白色顏料，讓牙膏呈現不透明的亮白色，沒有清潔功能。",
+        "hum": "歐盟 2022 年起禁止 E171（食品級二氧化鈦）用於食品，理由是無法排除基因毒性。歐盟消費者安全科學委員會（SCCS）重新評估後也認為，會從口腔進入的化粧品無法排除這項疑慮。刷牙會吞入少量，但遠低於食品攝取量。"
+      },
+      "bodywash": {
+        "role": "白色色素",
+        "human": 0,
+        "sum": "讓香皂或沐浴乳更白，沒有清潔功能。",
+        "use": "白色顏料，讓產品呈現不透明的乳白色。",
+        "hum": "用在沖洗型產品、不會吞下也不會吸入，一般認為風險低；疑慮主要在口腔產品與噴霧。"
+      }
+    }
+  },
+  {
+    "id": "blue1",
+    "zh": "亮藍（藍色 1 號）",
+    "inci": "CI 42090 · Brilliant Blue FCF",
+    "avoid": "dyes",
+    "aliases": ["ci 42090", "ci42090", "42090", "brilliant blue", "blue 1", "fd&c blue no. 1", "亮藍", "食用藍色1號", "藍色1號", "藍色一號"],
+    "env": 2,
+    "envT": "屬三苯甲烷類合成染料，結構穩定，一般污水處理不易將它生物分解。它只為外觀而存在，卻增加了廢水的色度與處理負擔。",
+    "law": "台灣與歐盟皆允許用於牙膏。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "人工色素",
+        "human": 1,
+        "sum": "藍色條紋常用的合成染料，在水中不易分解。",
+        "use": "讓牙膏或凝膠呈現藍色、做出條紋。",
+        "hum": "腸道吸收量極少，一般認為低風險；極少數人可能過敏。"
+      },
+      "bodywash": {
+        "role": "人工色素",
+        "human": 0,
+        "sum": "合成藍色染料，只為了顏色。",
+        "use": "讓沐浴乳呈現藍色或綠色。",
+        "hum": "皮膚吸收量極少，一般認為低風險；極少數人可能過敏。"
+      }
+    }
+  },
+  {
+    "id": "yellow5",
+    "zh": "檸檬黃（黃色 4 號）",
+    "inci": "CI 19140 · Tartrazine",
+    "avoid": "dyes",
+    "aliases": ["ci 19140", "ci19140", "19140", "tartrazine", "yellow 5", "fd&c yellow no. 5", "檸檬黃", "食用黃色4號", "黃色4號", "黃色四號"],
+    "env": 2,
+    "envT": "屬偶氮染料，難以被一般污水處理分解；在缺氧環境（例如底泥）中可能被分解成芳香胺，部分芳香胺具毒性。",
+    "law": "台灣與歐盟皆允許用於牙膏；歐盟食品需標示警語。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "人工色素",
+        "human": 2,
+        "sum": "偶氮染料，少數人過敏，與兒童過動研究有關。",
+        "use": "調出黃色或綠色（與藍色混用）。",
+        "hum": "少數人會出現過敏或不耐反應（如蕁麻疹）。英國 2007 年的研究發現，含此類色素的混合物可能與部分兒童過動行為有關，歐盟因此要求含這類色素的食品加註警語。"
+      },
+      "bodywash": {
+        "role": "人工色素",
+        "human": 1,
+        "sum": "偶氮染料，少數人過敏。",
+        "use": "調出黃色或綠色。",
+        "hum": "少數人會出現過敏或不耐反應。沖洗型產品接觸時間短，風險比食品低。"
+      }
+    }
+  },
+  {
+    "id": "pb15",
+    "zh": "酞菁藍",
+    "inci": "CI 74160 · Pigment Blue 15",
+    "avoid": "dyes",
+    "aliases": ["ci 74160", "ci74160", "74160", "pigment blue 15", "酞菁藍", "銅酞菁"],
+    "env": 2,
+    "envT": "化學結構非常穩定、含銅，在環境中幾乎不分解，會隨污泥累積。",
+    "law": "台灣與歐盟皆允許用於化粧品。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "人工色素",
+        "human": 1,
+        "sum": "含銅的藍色顏料，極穩定，幾乎不分解。",
+        "use": "藍色顆粒或條紋的顏料。",
+        "hum": "不溶於水，口腔與腸道吸收很少，一般認為低風險。"
+      }
+    }
+  },
+  {
+    "id": "saccharin",
+    "zh": "糖精鈉",
+    "inci": "Sodium Saccharin",
+    "avoid": "sweet",
+    "aliases": ["sodium saccharin", "saccharin", "糖精鈉", "糖精"],
+    "env": 1,
+    "envT": "污水處理中大部分可被去除，但在部分河川與地下水仍可檢出，是常被用來追蹤生活污水的指標物質之一。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "甜味劑",
+        "human": 1,
+        "sum": "人工甜味劑，早年的致癌疑慮已被排除。",
+        "use": "讓牙膏有甜味但不提供蛀牙菌養分。",
+        "hum": "1970 年代大鼠實驗曾引發膀胱癌疑慮，後來確認致病機制不適用於人類，美國 2000 年已將它從致癌物清單移除。仍想避開人工甜味劑的人可選木糖醇或甜菊配方。"
+      }
+    }
+  },
+  {
+    "id": "paraben",
+    "zh": "對羥基苯甲酸酯類",
+    "inci": "Methylparaben · Propylparaben …",
+    "avoid": "paraben",
+    "aliases": ["paraben", "對羥基苯甲酸", "尼泊金", "羥苯甲酯", "羥苯丙酯"],
+    "env": 1,
+    "envT": "多數可在污水處理中分解，但在河川中仍可檢出。",
+    "law": "台灣與歐盟對各種 paraben 分別訂有限量或禁用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "防腐劑",
+        "human": 2,
+        "sum": "防腐劑，有微弱類雌激素活性。",
+        "use": "防止產品開封後滋生細菌與黴菌。",
+        "hum": "具微弱的類雌激素活性。歐盟 2014 年禁用其中五種（異丙基、異丁基、苯基、苄基、戊基），並對丙基、丁基設較嚴的限量；甲基、乙基一般認為風險較低。"
+      },
+      "bodywash": {
+        "role": "防腐劑",
+        "human": 1,
+        "sum": "防腐劑，有微弱類雌激素活性，沖洗型產品接觸量低。",
+        "use": "防止含水的沐浴乳開封後滋生細菌與黴菌。",
+        "hum": "具微弱的類雌激素活性。歐盟 2014 年禁用其中五種，並對丙基、丁基設較嚴的限量；甲基、乙基一般認為安全。沖洗型產品停留在皮膚上的時間很短。"
+      }
+    }
+  },
+  {
+    "id": "peg",
+    "zh": "聚乙二醇（PEG）",
+    "inci": "PEG-6 · PEG-8 · PEG-12 …",
+    "aliases": ["peg-", "peg ", "polyethylene glycol", "聚乙二醇"],
+    "env": 1,
+    "envT": "分子量越大越難被生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "保濕／溶劑",
+        "human": 1,
+        "sum": "本身毒性低，品質差的原料可能殘留環氧乙烷。",
+        "use": "保濕、讓質地均勻、幫助香料溶解。",
+        "hum": "本身毒性低。製造時可能殘留微量環氧乙烷與 1,4-二噁烷，取決於原料純化程度。"
+      },
+      "bodywash": {
+        "role": "乳化／增稠",
+        "human": 1,
+        "sum": "本身毒性低，品質差的原料可能殘留環氧乙烷。",
+        "use": "乳化、增稠，讓沐浴乳質地滑順。",
+        "hum": "本身毒性低，但會讓皮膚更容易吸收其他成分。製造時可能殘留微量環氧乙烷與 1,4-二噁烷。"
+      }
+    }
+  },
+  {
+    "id": "fluoride",
+    "zh": "氟化物",
+    "inci": "Sodium Fluoride · Sodium Monofluorophosphate · Stannous Fluoride",
+    "avoid": "fluoride",
+    "aliases": ["sodium fluoride", "sodium monofluorophosphate", "stannous fluoride", "amine fluoride", "fluoride", "氟化鈉", "單氟磷酸鈉", "氟化亞錫", "氟化物"],
+    "env": 0,
+    "envT": "以一般用量排放，對環境影響低。",
+    "law": "台灣非藥用牙膏總含氟量須在 1500 ppm 以下。",
+    "src": [
+      {
+        "t": "台北市法規附件：牙膏成分宣稱詞句（含氟量）",
+        "u": "https://www.laws.taipei.gov.tw/lawatt/Law/A040170040008400-20190604-4000-002.pdf"
+      }
+    ],
+    "by": {
+      "toothpaste": {
+        "role": "防蛀活性成分",
+        "human": 1,
+        "benefit": true,
+        "sum": "預防蛀牙最有實證的成分；兒童須注意用量。",
+        "use": "幫助琺瑯質再礦化、抵抗酸蝕，是預防蛀牙的主力成分。",
+        "hum": "世界衛生組織認定為預防蛀牙最有效的工具之一，成人牙膏含氟約 1000–1450 ppm 才有實質效果。主要風險是幼兒長期吞入過量造成氟斑牙，因此 6 歲以下用米粒到豌豆大小、在大人陪同下使用。選擇無氟牙膏前，建議先和牙醫討論自己的蛀牙風險。"
+      }
+    }
+  },
+  {
+    "id": "carrageenan",
+    "zh": "鹿角菜膠",
+    "inci": "Carrageenan",
+    "aliases": ["carrageenan", "鹿角菜膠", "卡拉膠"],
+    "env": 0,
+    "envT": "海藻來源，可生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "增稠劑",
+        "human": 0,
+        "sum": "海藻來源的增稠劑。",
+        "use": "讓牙膏成形、不分層。",
+        "hum": "食品級鹿角菜膠一般認為安全。網路上的爭議多半來自「降解鹿角菜膠」，那是不同的物質，不用於食品與牙膏。"
+      }
+    }
+  },
+  {
+    "id": "capb",
+    "zh": "椰油醯胺丙基甜菜鹼",
+    "inci": "Cocamidopropyl Betaine",
+    "aliases": ["cocamidopropyl betaine", "椰油醯胺丙基甜菜鹼", "椰油酰胺丙基甜菜碱"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "溫和起泡劑",
+        "human": 1,
+        "sum": "常見的 SLS 替代起泡劑，溫和但少數人過敏。",
+        "use": "無 SLS 牙膏常用它來起泡。",
+        "hum": "刺激性低。少數人會有接觸性過敏，多與製程雜質有關。"
+      },
+      "bodywash": {
+        "role": "溫和起泡劑",
+        "human": 1,
+        "sum": "常見的輔助起泡劑，溫和但少數人過敏。",
+        "use": "搭配主要起泡劑，讓泡沫更細緻、降低刺激感。",
+        "hum": "刺激性低。少數人會有接觸性過敏，多與製程雜質有關。"
+      }
+    }
+  },
+  {
+    "id": "glucoside",
+    "zh": "月桂基葡糖苷",
+    "inci": "Lauryl Glucoside",
+    "aliases": ["lauryl glucoside", "coco-glucoside", "decyl glucoside", "月桂基葡糖苷", "椰油基葡糖苷", "癸基葡糖苷"],
+    "env": 0,
+    "envT": "容易生物分解，對水生生物毒性低。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "溫和起泡劑", "human": 0, "sum": "由椰子油與葡萄糖製成的溫和起泡劑。", "use": "天然取向牙膏常用的起泡劑。", "hum": "刺激性很低。" },
+      "bodywash": { "role": "溫和起泡劑", "human": 0, "sum": "由椰子油與葡萄糖製成的溫和起泡劑。", "use": "溫和配方或嬰兒沐浴乳常用的起泡劑。", "hum": "刺激性很低。" }
+    }
+  },
+  {
+    "id": "flavor",
+    "zh": "香料",
+    "inci": "Fragrance · Parfum · Flavor · Aroma",
+    "aliases": ["flavor", "flavour", "aroma", "香料", "香精", "薄荷香料", "fragrance", "parfum", "香氛"],
+    "env": 0,
+    "envT": "用量少，影響低。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "風味",
+        "human": 1,
+        "sum": "提供薄荷等風味，少數人會過敏。",
+        "use": "讓口氣清新、掩蓋其他成分的味道。",
+        "hum": "通常是薄荷油、薄荷醇等的混合物，成分表多半不會列出細項。少數人對肉桂醛、薄荷等成分過敏。"
+      },
+      "bodywash": {
+        "role": "香氣",
+        "human": 1,
+        "sum": "「香料」一詞底下可能有數十種成分，是化粧品過敏的常見原因。",
+        "use": "讓產品有香味，或掩蓋原料本身的氣味。",
+        "hum": "成分表通常只寫「香料」，不必列出細項。香料是化粧品接觸性皮膚炎最常見的原因之一；容易過敏或皮膚敏感的人，優先選無香料產品。注意「無香味」不一定等於「無香料」，有些產品會加掩蓋氣味的香料。",
+        "envT": "合成麝香等部分香料成分不易被污水處理去除，在河川與魚體中都能檢出。",
+        "avoid": "fragrance"
+      }
+    }
+  },
+  {
+    "id": "limonene",
+    "zh": "檸檬烯",
+    "inci": "Limonene",
+    "aliases": ["limonene", "檸檬烯", "柠檬烯"],
+    "env": 1,
+    "envT": "可生物分解，但對水生生物有毒性。",
+    "law": "歐盟要求在成分表中單獨標示。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "香氣成分",
+        "human": 1,
+        "sum": "精油中的天然香氣成分，屬於需標示的致敏香料。",
+        "use": "來自柑橘或薄荷精油的香氣成分。",
+        "hum": "氧化後可能引起皮膚過敏，歐盟將它列為超過一定濃度須單獨標示的致敏香料。"
+      },
+      "bodywash": {
+        "role": "致敏香料",
+        "human": 1,
+        "sum": "柑橘香氣成分，氧化後容易致敏。",
+        "use": "香料或柑橘精油的成分。",
+        "hum": "氧化後可能引起皮膚過敏，歐盟將它列為超過一定濃度須單獨標示的致敏香料。",
+        "avoid": "fragrance"
+      }
+    }
+  },
+  {
+    "id": "silica",
+    "zh": "水合二氧化矽",
+    "inci": "Hydrated Silica",
+    "aliases": ["hydrated silica", "silica", "水合二氧化矽", "二氧化矽", "水合矽石"],
+    "exactAliases": ["silica"],
+    "env": 0,
+    "envT": "與沙子相同成分，影響低。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "研磨劑", "human": 0, "sum": "最常見的溫和研磨劑。", "use": "去除牙菌斑與表面色素。", "hum": "非結晶型二氧化矽，口腔使用安全。" }
+    }
+  },
+  {
+    "id": "caco3",
+    "zh": "碳酸鈣",
+    "inci": "Calcium Carbonate",
+    "aliases": ["calcium carbonate", "碳酸鈣"],
+    "env": 0,
+    "envT": "與石灰岩相同成分，影響低。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [
+      { "t": "食藥署：牙膏重金屬限量（TVBS）", "u": "https://health.tvbs.com.tw/life/354409" }
+    ],
+    "by": {
+      "toothpaste": {
+        "role": "研磨劑",
+        "human": 0,
+        "sum": "天然礦物研磨劑。",
+        "use": "去除牙菌斑與表面汙漬。",
+        "hum": "安全。天然礦物來源可能帶微量重金屬，台灣規定牙膏鉛含量不得超過 10 ppm。"
+      }
+    }
+  },
+  {
+    "id": "glycerin",
+    "zh": "甘油",
+    "inci": "Glycerin",
+    "aliases": ["glycerin", "glycerine", "glycerol", "甘油", "丙三醇"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "保濕劑", "human": 0, "sum": "保濕，防止牙膏變乾。", "use": "保持牙膏濕潤、口感滑順。", "hum": "安全。" },
+      "bodywash": { "role": "保濕劑", "human": 0, "sum": "保濕；真皂在皂化時也會自然產生甘油。", "use": "減少洗後的緊繃感。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "sorbitol",
+    "zh": "山梨糖醇",
+    "inci": "Sorbitol",
+    "aliases": ["sorbitol", "山梨糖醇", "山梨醇"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "保濕／甜味", "human": 0, "sum": "保濕兼甜味，不易被蛀牙菌利用。", "use": "保濕並帶淡淡甜味。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "xylitol",
+    "zh": "木糖醇",
+    "inci": "Xylitol",
+    "aliases": ["xylitol", "木糖醇"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "甜味劑",
+        "human": 0,
+        "benefit": true,
+        "sum": "天然甜味劑，蛀牙菌無法利用。",
+        "use": "提供甜味，並有助減少牙菌斑。",
+        "hum": "安全。注意木糖醇對狗有毒，牙膏請放在寵物拿不到的地方。"
+      }
+    }
+  },
+  {
+    "id": "thickener",
+    "zh": "纖維素類增稠劑",
+    "inci": "Cellulose Gum · Microcrystalline Cellulose",
+    "aliases": ["cellulose gum", "sodium carboxymethylcellulose", "carboxymethylcellulose", "microcrystalline cellulose", "纖維素膠", "羧甲基纖維素鈉", "微晶纖維素", "hydroxyethylcellulose", "hydroxypropyl methylcellulose", "羥乙基纖維素"],
+    "env": 0,
+    "envT": "可生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "增稠劑", "human": 0, "sum": "植物纖維來源的增稠劑。", "use": "讓牙膏成形。", "hum": "安全。" },
+      "bodywash": { "role": "增稠劑", "human": 0, "sum": "植物纖維來源的增稠劑。", "use": "讓沐浴乳變稠。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "xanthan",
+    "zh": "三仙膠",
+    "inci": "Xanthan Gum",
+    "aliases": ["xanthan gum", "xanthan", "三仙膠", "黃原膠", "黄原胶"],
+    "env": 0,
+    "envT": "可生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "增稠劑", "human": 0, "sum": "微生物發酵製成的增稠劑。", "use": "讓牙膏成形。", "hum": "安全，也用於食品。" },
+      "bodywash": { "role": "增稠劑", "human": 0, "sum": "微生物發酵製成的增稠劑。", "use": "讓沐浴乳變稠。", "hum": "安全，也用於食品。" }
+    }
+  },
+  {
+    "id": "kno3",
+    "zh": "硝酸鉀",
+    "inci": "Potassium Nitrate",
+    "aliases": ["potassium nitrate", "硝酸鉀"],
+    "env": 0,
+    "envT": "用量少，影響低。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": {
+        "role": "抗敏感成分",
+        "human": 0,
+        "benefit": true,
+        "sum": "舒緩牙齒敏感。",
+        "use": "鉀離子能降低牙本質神經對冷熱的反應。",
+        "hum": "在牙膏用量下安全。"
+      }
+    }
+  },
+  {
+    "id": "naoh",
+    "zh": "氫氧化鈉",
+    "inci": "Sodium Hydroxide · Potassium Hydroxide",
+    "aliases": ["sodium hydroxide", "氫氧化鈉", "potassium hydroxide", "氫氧化鉀"],
+    "env": 0,
+    "envT": "影響低。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "酸鹼調整", "human": 0, "sum": "微量調整酸鹼值。", "use": "把配方調到接近中性。", "hum": "用量極少且已被中和，不殘留強鹼。" },
+      "bodywash": {
+        "zh": "氫氧化鈉／氫氧化鉀",
+        "role": "皂化／酸鹼調整",
+        "human": 0,
+        "sum": "做肥皂必需的鹼，做好的皂裡已經反應完。",
+        "use": "和油脂進行皂化反應做成肥皂：氫氧化鈉做固體皂，氫氧化鉀做液體皂。在沐浴乳裡則是微量調整酸鹼值。",
+        "hum": "皂化完成後會轉變成肥皂和甘油，成品中不殘留強鹼。成分表寫出它，只是代表這塊皂是用它做的。"
+      }
+    }
+  },
+  {
+    "id": "water",
+    "zh": "水",
+    "inci": "Water · Aqua",
+    "aliases": [],
+    "exactAliases": ["water", "aqua", "water (aqua)", "aqua (water)", "水", "純水", "去離子水", "water (eau)", "eau", "purified water", "aqua/water/eau"],
+    "env": 0,
+    "envT": "無。",
+    "law": "—",
+    "src": [],
+    "by": {
+      "toothpaste": { "role": "基底", "human": 0, "sum": "基底。", "use": "溶解其他成分。", "hum": "安全。" },
+      "bodywash": { "role": "基底", "human": 0, "sum": "基底。", "use": "溶解其他成分。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "soap",
+    "zh": "皂基（皂化油脂）",
+    "inci": "Sodium Olivate · Sodium Cocoate · Sodium Stearate · Potassium Cocoate …",
+    "aliases": ["sodium olivate", "sodium cocoate", "sodium tallowate", "sodium stearate", "sodium laurate", "sodium oleate", "sodium palmitate", "sodium castorate", "sodium ricinoleate", "sodium sunflowerseedate", "sodium rapeseedate", "sodium shea butterate", "sodium cocoa butterate", "sodium hempseedate", "sodium babassuate", "sodium avocadoate", "sodium sweet almondate", "sodium rice branate", "potassium cocoate", "potassium oleate", "potassium olivate", "potassium laurate", "potassium stearate", "potassium hempseedate", "potassium sunflowerseedate", "脂肪酸鈉", "脂肪酸鉀", "皂基", "肥皂基", "硬脂酸鈉", "月桂酸鈉", "油酸鈉", "牛脂酸鈉"],
+    "env": 0,
+    "envT": "容易生物分解。在硬水中會和鈣、鎂結合成皂垢，排放後很快失去界面活性。",
+    "law": "台灣自 2019 年起將香皂納入化粧品管理。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "清潔成分",
+        "human": 1,
+        "sum": "真正的肥皂：油脂加鹼皂化而成，偏鹼性。",
+        "use": "油脂和氫氧化鈉（或氫氧化鉀）反應後的產物，就是肥皂本身的清潔成分。成分名稱「○○酸鈉」前面的字代表用了哪種油，例如 Sodium Olivate 是橄欖油、Sodium Cocoate 是椰子油、Sodium Tallowate 是牛油。",
+        "hum": "成分單純，通常不需要防腐劑。肥皂水溶液的酸鹼值約 9 到 10，比皮膚（約 5.5）鹼性，一般皮膚洗後很快就會恢復，但皮膚很乾或有異位性皮膚炎的人可能覺得乾澀。"
+      }
+    }
+  },
+  {
+    "id": "palm",
+    "zh": "棕櫚油來源成分",
+    "inci": "Sodium Palmate · Sodium Palm Kernelate · Elaeis Guineensis Oil",
+    "avoid": "palm",
+    "aliases": ["sodium palmate", "sodium palm kernelate", "potassium palmate", "potassium palm kernelate", "elaeis guineensis", "palm oil", "palm kernel oil", "棕櫚油", "棕櫚核仁油", "棕櫚仁油", "棕櫚油脂肪酸鈉", "棕櫚核仁油脂肪酸鈉"],
+    "env": 2,
+    "envT": "棕櫚油的大規模種植是東南亞熱帶雨林消失與紅毛猩猩棲地減少的主要原因之一。有 RSPO 等永續認證、或品牌自己追溯產地的棕櫚油，影響較小，但成分表上看不出來源。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "清潔成分（皂基）",
+        "human": 0,
+        "sum": "用棕櫚油做成的皂基，對人體溫和，環境問題在於產地。",
+        "use": "讓肥皂變硬、耐用、泡沫穩定。很多合成起泡劑（例如 SLS）的原料也來自棕櫚核仁油，只是成分表上看不出來。",
+        "hum": "和其他皂基一樣，對人體溫和，偏鹼性。"
+      }
+    }
+  },
+  {
+    "id": "oils",
+    "zh": "植物油脂",
+    "inci": "Olea Europaea · Cocos Nucifera · Butyrospermum Parkii · Simmondsia Chinensis …",
+    "aliases": ["olea europaea", "olive oil", "cocos nucifera", "coconut oil", "butyrospermum parkii", "shea butter", "ricinus communis", "castor oil", "prunus amygdalus dulcis", "sweet almond oil", "helianthus annuus", "sunflower seed oil", "cannabis sativa seed oil", "hemp seed oil", "hemp oil", "simmondsia chinensis", "jojoba", "persea gratissima", "avocado oil", "oryza sativa bran oil", "rice bran oil", "theobroma cacao", "cocoa butter", "橄欖油", "椰子油", "乳油木果脂", "乳油木", "蓖麻油", "甜杏仁油", "葵花籽油", "大麻籽油", "荷荷巴油", "荷荷芭油", "酪梨油", "米糠油", "可可脂"],
+    "env": 0,
+    "envT": "可生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "油脂／保濕",
+        "human": 0,
+        "sum": "植物油。在手工皂成分表上，代表做皂用的油。",
+        "use": "在沐浴乳裡是滋潤成分。手工皂常把皂化前的原料列出來（例如「橄欖油、椰子油、氫氧化鈉」），這時油脂大多已經變成肥皂，只有少量刻意保留（超脂）讓洗感不那麼乾。",
+        "hum": "安全。極少數人對特定植物油過敏。"
+      }
+    }
+  },
+  {
+    "id": "isethionate",
+    "zh": "羥乙磺酸酯類起泡劑",
+    "inci": "Sodium Lauroyl Isethionate · Sodium Cocoyl Isethionate",
+    "aliases": ["sodium lauroyl isethionate", "sodium cocoyl isethionate", "sodium isethionate", "月桂醯羥乙磺酸酯鈉", "椰油醯羥乙磺酸酯鈉", "羥乙磺酸鈉", "椰油醯基羥乙基磺酸鈉"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "溫和起泡劑",
+        "human": 0,
+        "sum": "合成皂（例如多芬香皂）的主要清潔成分，溫和、接近中性。",
+        "use": "做成固體的溫和界面活性劑。成分表前段是它的香皂，屬於合成皂，不是真皂。",
+        "hum": "刺激性低，酸鹼值接近皮膚，比真皂不容易乾澀。"
+      }
+    }
+  },
+  {
+    "id": "amino",
+    "zh": "胺基酸系起泡劑",
+    "inci": "Sodium Cocoyl Glutamate · Sodium Cocoyl Glycinate · Sodium Lauroyl Sarcosinate …",
+    "aliases": ["cocoyl glutamate", "lauroyl glutamate", "cocoyl glycinate", "lauroyl glycinate", "lauroyl sarcosinate", "cocoyl sarcosinate", "cocoyl alaninate", "lauroyl methyl taurate", "cocoyl methyl taurate", "椰油醯穀胺酸", "椰油醯麩胺酸", "椰油醯甘胺酸", "椰油醯基甘胺酸", "月桂醯肌胺酸", "椰油醯丙胺酸", "月桂醯穀胺酸", "甲基牛磺酸鈉"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "溫和起泡劑",
+        "human": 0,
+        "sum": "由胺基酸和椰子油脂肪酸製成的溫和起泡劑。",
+        "use": "標榜溫和、弱酸性的沐浴乳常用它取代 SLS／SLES。",
+        "hum": "刺激性低，適合乾性與敏感肌。"
+      }
+    }
+  },
+  {
+    "id": "allergens",
+    "zh": "致敏香料成分",
+    "inci": "Linalool · Citronellol · Geraniol · Hexyl Cinnamal · Coumarin …",
+    "avoid": "fragrance",
+    "aliases": ["linalool", "citronellol", "geraniol", "hexyl cinnamal", "amyl cinnamal", "cinnamal", "alpha-isomethyl ionone", "coumarin", "eugenol", "citral", "benzyl salicylate", "benzyl benzoate", "benzyl cinnamate", "benzyl alcohol", "farnesol", "hydroxycitronellal", "anise alcohol", "evernia prunastri", "沉香醇", "芳樟醇", "香茅醇", "香葉醇", "牻牛兒醇", "己基肉桂醛", "肉桂醛", "香豆素", "丁香酚", "檸檬醛", "水楊酸苄酯", "苯甲酸苄酯", "苯甲醇", "紫羅蘭酮", "金合歡醇"],
+    "env": 1,
+    "envT": "多數可生物分解，部分對水生生物有毒性。",
+    "law": "歐盟要求這些香料成分超過一定濃度（沖洗型產品 0.01%）時，必須在成分表中單獨列出。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "致敏香料",
+        "human": 1,
+        "sum": "香料中容易引起過敏、須單獨標示的成分。",
+        "use": "香料或精油的組成成分。看到它們，代表產品有加香味。",
+        "hum": "對大多數人無害，但已經對香料過敏的人可能出現紅腫發癢。成分表列出越多種，代表香料越複雜。"
+      }
+    }
+  },
+  {
+    "id": "lilial",
+    "zh": "鈴蘭醛（Lilial）",
+    "inci": "Butylphenyl Methylpropional",
+    "avoid": "fragrance",
+    "aliases": ["butylphenyl methylpropional", "lilial", "丁苯基甲基丙醛", "鈴蘭醛", "p-bmhca"],
+    "env": 1,
+    "envT": "對水生生物有毒性。",
+    "law": "歐盟自 2022 年 3 月 1 日起禁用於化粧品，紐西蘭等國也已跟進。台灣的管制狀態本頁尚未查證，請以食藥署公告為準。",
+    "src": [
+      {
+        "t": "Wessling：歐盟 2022 年禁用 Lilial",
+        "u": "https://de.wessling-group.com/en/from-march-1-2022-a-ban-on-the-fragrance-lilial-will-be-in-force"
+      }
+    ],
+    "by": {
+      "bodywash": {
+        "role": "香料",
+        "human": 3,
+        "sum": "鈴蘭香氣的香料，歐盟已因生殖毒性禁用。",
+        "use": "提供花香，過去常見於沐浴乳、洗髮精與香水。",
+        "hum": "歐盟將它列為第 1B 類生殖毒性物質（可能損害生育力、疑似傷害胎兒），2022 年起禁止用於化粧品。仍可能出現在禁令前生產或從其他地區進口的產品。"
+      }
+    }
+  },
+  {
+    "id": "mit",
+    "zh": "異噻唑啉酮類防腐劑（MIT／MCI）",
+    "inci": "Methylisothiazolinone · Methylchloroisothiazolinone",
+    "avoid": "mit",
+    "aliases": ["methylisothiazolinone", "methylchloroisothiazolinone", "甲基異噻唑啉酮", "甲基氯異噻唑啉酮", "甲基異噻唑林酮", "甲基氯異噻唑林酮"],
+    "exactAliases": ["mit", "mi", "mci", "cmit", "mci/mi", "cmit/mit"],
+    "env": 2,
+    "envT": "對魚類、藻類等水生生物毒性高。",
+    "law": "台灣：MI 限量 0.01%，只能用在立即沖洗掉的產品，且不得用於接觸黏膜的產品；MCI/MI 混合物限量 0.0015%，同樣只限沖洗型。歐盟：禁用於駐留型產品，沖洗型限量 0.0015%。",
+    "src": [
+      { "t": "衛福部：我國化妝品 MI/MCI 防腐劑之管理規定", "u": "https://www.mohw.gov.tw/cp-3218-22756-1.html" },
+      {
+        "t": "行政院公報：化粧品防腐劑成分名稱及使用限制表",
+        "u": "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg025100/ch08/type1/gov70/num54/images/Eg01.pdf"
+      }
+    ],
+    "by": {
+      "bodywash": {
+        "role": "防腐劑",
+        "human": 2,
+        "sum": "強效防腐劑，是常見的接觸性過敏原。",
+        "use": "用極低濃度就能防止含水產品長菌，便宜又有效，所以沐浴乳、洗髮精很常見。",
+        "hum": "2010 年代歐洲出現大量因 MIT 引起的接觸性皮膚炎，因此各國陸續限縮用途。沖洗型產品接觸時間短、風險較低，但已經對它過敏的人即使微量也會發作。"
+      }
+    }
+  },
+  {
+    "id": "formaldehyde",
+    "zh": "甲醛釋放型防腐劑",
+    "inci": "DMDM Hydantoin · Imidazolidinyl Urea · Diazolidinyl Urea · Quaternium-15 …",
+    "avoid": "formaldehyde",
+    "aliases": ["dmdm hydantoin", "imidazolidinyl urea", "diazolidinyl urea", "quaternium-15", "sodium hydroxymethylglycinate", "bronopol", "2-bromo-2-nitropropane-1,3-diol", "methenamine", "dmdm乙內醯脲", "dmdm 乙內醯脲", "咪唑烷基脲", "重氮咪唑烷基脲", "雙咪唑烷基脲", "季銨鹽-15", "溴硝丙二醇", "羥甲基甘胺酸鈉"],
+    "env": 1,
+    "envT": "釋出的甲醛容易分解；溴硝丙二醇對水生生物有毒性。",
+    "law": "台灣與歐盟對各成分分別訂有限量。歐盟自 2024 年起，產品中釋出的甲醛總量達 0.001% 就必須標示「含甲醛」。",
+    "src": [
+      { "t": "EUR-Lex：Regulation (EU) 2022/1181", "u": "https://eur-lex.europa.eu/eli/reg/2022/1181/oj" }
+    ],
+    "by": {
+      "bodywash": {
+        "role": "防腐劑",
+        "human": 2,
+        "sum": "會在產品中緩慢釋出微量甲醛來防腐。",
+        "use": "在含水的產品裡慢慢釋出甲醛，抑制細菌。",
+        "hum": "甲醛是已知的致癌物與常見過敏原。產品裡釋出的量很低，但對甲醛過敏的人可能起疹子；歐盟因此在 2024 年把標示門檻大幅降低。"
+      }
+    }
+  },
+  {
+    "id": "mildpres",
+    "zh": "苯甲酸鈉／山梨酸鉀",
+    "inci": "Sodium Benzoate · Potassium Sorbate",
+    "aliases": ["sodium benzoate", "benzoic acid", "potassium sorbate", "sorbic acid", "苯甲酸鈉", "苯甲酸", "山梨酸鉀", "山梨酸"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用，也用於食品。",
+    "src": [],
+    "by": {
+      "bodywash": { "role": "防腐劑", "human": 0, "sum": "食品也在用的溫和防腐劑。", "use": "取代 paraben、MIT 的常見防腐選擇。", "hum": "刺激性低。" }
+    }
+  },
+  {
+    "id": "phenoxy",
+    "zh": "苯氧乙醇",
+    "inci": "Phenoxyethanol",
+    "aliases": ["phenoxyethanol", "苯氧乙醇"],
+    "env": 0,
+    "envT": "可生物分解。",
+    "law": "台灣與歐盟限量 1%。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "防腐劑",
+        "human": 0,
+        "sum": "常見的防腐劑，沖洗型產品中風險低。",
+        "use": "防止產品長菌，常和其他防腐劑搭配。",
+        "hum": "在限量內一般認為安全，少數人會刺激；歐盟提醒不要用在嬰兒的尿布部位。"
+      }
+    }
+  },
+  {
+    "id": "edta",
+    "zh": "EDTA 螯合劑",
+    "inci": "Tetrasodium EDTA · Disodium EDTA",
+    "avoid": "edta",
+    "aliases": ["tetrasodium edta", "disodium edta", "edta", "乙二胺四乙酸", "乙二胺四醋酸"],
+    "env": 2,
+    "envT": "在污水處理中很難分解，進入河川後會和重金屬結合，讓沉在底泥的重金屬重新溶到水中。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "螯合劑",
+        "human": 0,
+        "sum": "穩定配方用，對人體溫和，但在環境中很難分解。",
+        "use": "抓住水中的鈣、鎂與金屬離子，讓產品不變色、不變質，在硬水中也起泡。",
+        "hum": "皮膚幾乎不吸收，一般認為安全。可以找用植酸鈉、GLDA 等可分解螯合劑的產品。"
+      }
+    }
+  },
+  {
+    "id": "etidronate",
+    "zh": "依替膦酸鹽",
+    "inci": "Tetrasodium Etidronate · Etidronic Acid",
+    "aliases": ["etidronate", "etidronic acid", "依替膦酸", "羥乙膦酸", "羥基乙叉二膦酸"],
+    "env": 1,
+    "envT": "含磷，不易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": { "role": "螯合劑", "human": 0, "sum": "防止香皂變色、出現斑點的螯合劑。", "use": "抓住金屬離子，讓香皂保持顏色與香味。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "greenchelate",
+    "zh": "可分解螯合劑",
+    "inci": "Sodium Phytate · Tetrasodium Glutamate Diacetate (GLDA)",
+    "aliases": ["sodium phytate", "phytic acid", "tetrasodium glutamate diacetate", "glda", "植酸鈉", "植酸", "穀胺酸二乙酸四鈉", "谷氨酸二乙酸四鈉"],
+    "env": 0,
+    "envT": "容易生物分解，是 EDTA 的環保替代品。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": { "role": "螯合劑", "human": 0, "sum": "可生物分解的 EDTA 替代品。", "use": "和 EDTA 一樣穩定配方。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "polymer",
+    "zh": "液態合成聚合物",
+    "inci": "Polyquaternium-7 · Acrylates Copolymer · Carbomer …",
+    "avoid": "polymer",
+    "aliases": ["polyquaternium", "acrylate", "carbomer", "聚季銨鹽", "聚四級銨鹽", "丙烯酸酯", "丙烯酸鹽", "卡波姆", "卡波莫"],
+    "env": 1,
+    "envT": "多數不易生物分解。它們是溶在產品裡的聚合物，不是塑膠微粒，不在禁令範圍內；是否算「液態塑膠」仍有爭議。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "增稠／柔滑",
+        "human": 0,
+        "sum": "讓沐浴乳變稠、洗後皮膚滑順的合成聚合物。",
+        "use": "增稠、懸浮珠光或顆粒、讓沖洗後皮膚有滑順感。",
+        "hum": "分子大，皮膚不吸收，一般認為安全。"
+      }
+    }
+  },
+  {
+    "id": "dea",
+    "zh": "椰油醯胺 DEA",
+    "inci": "Cocamide DEA · Lauramide DEA",
+    "avoid": "dea",
+    "aliases": ["cocamide dea", "lauramide dea", "cocamide diethanolamine", "椰油醯胺 dea", "椰油醯胺dea", "椰油酰胺dea", "椰子油脂肪酸二乙醇醯胺", "月桂醯胺 dea"],
+    "env": 1,
+    "envT": "可生物分解，但對水生生物有毒性。",
+    "law": "台灣與歐盟皆允許使用；歐盟要求含二級胺的原料雜質不得過高。加州已將它列入致癌物清單（Prop 65）。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "起泡增稠",
+        "human": 2,
+        "sum": "穩定泡沫的成分，國際癌症研究機構列為「可能致癌」。",
+        "use": "讓泡沫豐富穩定、讓沐浴乳變稠。",
+        "hum": "國際癌症研究機構（IARC）將椰子油二乙醇胺縮合物列為 2B 類「可能對人類致癌」，主要依據動物實驗；另一個疑慮是可能和防腐劑反應生成亞硝胺。沖洗型產品的接觸量低，但已有不少品牌改用替代成分。"
+      }
+    }
+  },
+  {
+    "id": "triclocarban",
+    "zh": "三氯卡班",
+    "inci": "Triclocarban",
+    "avoid": "triclosan",
+    "aliases": ["triclocarban", "三氯卡班", "三氯二苯脲"],
+    "env": 3,
+    "envT": "非常不易分解，會累積在污水污泥與河川底泥中，對水生生物毒性高。",
+    "law": "台灣仍允許在限量內使用。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "抗菌劑",
+        "human": 2,
+        "sum": "抗菌香皂成分，美國已禁用於一般抗菌洗手與沐浴產品。",
+        "use": "過去常見於抗菌香皂。",
+        "hum": "動物研究顯示可能干擾荷爾蒙。美國 FDA 於 2016 年與三氯沙一起禁止用於一般消費者的抗菌洗手與沐浴產品，理由是沒有證據比一般肥皂更有效。"
+      }
+    }
+  },
+  {
+    "id": "pcmx",
+    "zh": "氯二甲酚（PCMX）",
+    "inci": "Chloroxylenol",
+    "avoid": "triclosan",
+    "aliases": ["chloroxylenol", "pcmx", "氯二甲酚", "對氯間二甲苯酚", "對氯間二甲酚"],
+    "env": 2,
+    "envT": "對水生生物有毒性，在污水處理中無法完全去除。",
+    "law": "台灣與歐盟皆允許在限量內使用。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "抗菌劑",
+        "human": 1,
+        "sum": "常見於抗菌沐浴乳的殺菌成分。",
+        "use": "殺菌、抑菌，標榜抗菌的沐浴乳與洗手乳常見。",
+        "hum": "少數人會刺激或過敏。日常清潔用一般肥皂就足夠，不需要額外抗菌。"
+      }
+    }
+  },
+  {
+    "id": "salt",
+    "zh": "氯化鈉（鹽）",
+    "inci": "Sodium Chloride · Sea Salt",
+    "aliases": ["sodium chloride", "sea salt", "maris sal", "氯化鈉", "海鹽"],
+    "exactAliases": ["鹽", "食鹽"],
+    "env": 0,
+    "envT": "影響低。",
+    "law": "—",
+    "src": [],
+    "by": {
+      "bodywash": { "role": "增稠劑", "human": 0, "sum": "讓沐浴乳變稠，或讓肥皂變硬。", "use": "和起泡劑搭配可以讓液體變濃稠。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "citric",
+    "zh": "檸檬酸",
+    "inci": "Citric Acid · Sodium Citrate · Lactic Acid",
+    "aliases": ["citric acid", "sodium citrate", "lactic acid", "檸檬酸", "檸檬酸鈉", "乳酸"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": { "role": "酸鹼調整", "human": 0, "sum": "把配方調成弱酸性。", "use": "調整酸鹼值；在肥皂裡則用來抓住金屬離子、防止油脂酸敗。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "tocopherol",
+    "zh": "維生素 E",
+    "inci": "Tocopherol · Tocopheryl Acetate",
+    "aliases": ["tocopherol", "tocopheryl acetate", "維生素e", "維他命e", "生育醇", "生育酚"],
+    "env": 0,
+    "envT": "可生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": { "role": "抗氧化", "human": 0, "sum": "防止油脂氧化變質。", "use": "保護配方中的油脂不酸敗。", "hum": "安全，極少數人過敏。" }
+    }
+  },
+  {
+    "id": "fattyacid",
+    "zh": "脂肪酸",
+    "inci": "Stearic Acid · Lauric Acid · Palmitic Acid",
+    "aliases": ["stearic acid", "lauric acid", "palmitic acid", "myristic acid", "硬脂酸", "月桂酸", "棕櫚酸", "肉豆蔻酸"],
+    "env": 0,
+    "envT": "可生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": { "role": "硬化／滋潤", "human": 0, "sum": "讓香皂成形，也有滋潤感。", "use": "合成皂中用來讓皂體變硬，並帶來滋潤感。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "pearl",
+    "zh": "乙二醇硬脂酸酯",
+    "inci": "Glycol Distearate · Glycol Stearate",
+    "aliases": ["glycol distearate", "glycol stearate", "乙二醇二硬脂酸酯", "乙二醇硬脂酸酯"],
+    "env": 0,
+    "envT": "可生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": { "role": "珠光劑", "human": 0, "sum": "讓沐浴乳呈現珍珠光澤。", "use": "純粹為了外觀。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "pg",
+    "zh": "丙二醇",
+    "inci": "Propylene Glycol",
+    "aliases": ["propylene glycol", "丙二醇"],
+    "env": 0,
+    "envT": "容易生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": { "role": "保濕／溶劑", "human": 0, "sum": "保濕與溶解其他成分。", "use": "幫助香料溶解、保持濕潤。", "hum": "一般安全，極少數人刺激。" }
+    }
+  },
+  {
+    "id": "maltol",
+    "zh": "麥芽醇",
+    "inci": "Maltol",
+    "aliases": ["maltol", "麥芽醇"],
+    "env": 0,
+    "envT": "可生物分解。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": { "role": "香氣", "human": 0, "sum": "帶焦糖甜香的香味成分。", "use": "修飾香味。", "hum": "安全。" }
+    }
+  },
+  {
+    "id": "bht",
+    "zh": "BHT 抗氧化劑",
+    "inci": "BHT · Butylated Hydroxytoluene",
+    "aliases": ["butylated hydroxytoluene", "二丁基羥基甲苯"],
+    "exactAliases": ["bht"],
+    "env": 1,
+    "envT": "不易生物分解，有生物累積的可能。",
+    "law": "台灣與歐盟皆允許使用。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "抗氧化",
+        "human": 1,
+        "sum": "防止油脂與香料氧化的合成抗氧化劑。",
+        "use": "延長產品保存期限。",
+        "hum": "化粧品用量下一般認為安全；有少數研究探討它干擾荷爾蒙的可能，結論不一。"
+      }
+    }
+  },
+  {
+    "id": "eo",
+    "zh": "植物精油",
+    "inci": "Lavandula Angustifolia Oil · Melaleuca Alternifolia Leaf Oil …",
+    "avoid": "fragrance",
+    "aliases": ["精油", "essential oil", "lavandula angustifolia oil", "lavender oil", "melaleuca alternifolia leaf oil", "tea tree oil", "eucalyptus globulus leaf oil", "rosmarinus officinalis leaf oil", "citrus aurantium dulcis peel oil"],
+    "env": 1,
+    "envT": "可生物分解，但部分精油成分對水生生物有毒性。",
+    "law": "精油中的致敏成分超過一定濃度時，歐盟要求單獨標示。",
+    "src": [],
+    "by": {
+      "bodywash": {
+        "role": "天然香氣",
+        "human": 1,
+        "sum": "天然香氣，但同樣含有致敏香料成分。",
+        "use": "手工皂與天然取向產品常用來增加香氣。",
+        "hum": "「天然」不代表不會過敏。精油含有沉香醇、檸檬烯等致敏香料，香料過敏的人一樣要注意。"
+      }
+    }
+  }
+]

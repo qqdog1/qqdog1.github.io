@@ -1,0 +1,83 @@
+{
+  "key": "bodywash",
+  "name": "沐浴",
+  "prefs": [
+    { "k": "fragrance", "label": "香料與致敏香料" },
+    { "k": "mit", "label": "MIT／MCI 防腐劑" },
+    { "k": "formaldehyde", "label": "甲醛釋放型防腐劑" },
+    { "k": "paraben", "label": "Paraben 防腐劑" },
+    { "k": "triclosan", "label": "三氯沙等抗菌劑" },
+    { "k": "sls", "label": "SLS／SLES 起泡劑" },
+    { "k": "dea", "label": "椰油醯胺 DEA" },
+    { "k": "plastic", "label": "塑膠微粒" },
+    { "k": "dyes", "label": "人工色素" },
+    { "k": "palm", "label": "棕櫚油" },
+    { "k": "edta", "label": "EDTA" },
+    { "k": "polymer", "label": "液態合成聚合物" }
+  ],
+  "defaultPrefs": ["mit", "formaldehyde", "triclosan", "plastic"],
+  "samples": ["Water, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Sodium Chloride, Glycerin, Fragrance, Polyquaternium-7, Glycol Distearate, Citric Acid, Sodium Benzoate, Methylchloroisothiazolinone, Methylisothiazolinone, Tetrasodium EDTA, Limonene, Linalool, CI 42090", "橄欖油、椰子油、棕櫚油、乳油木果脂、純水、氫氧化鈉、薰衣草精油", "水、月桂醇聚醚硫酸酯鈉、椰油醯胺 DEA、椰油醯胺丙基甜菜鹼、氯化鈉、香料、DMDM 乙內醯脲、聚季銨鹽-10、檸檬酸、三氯沙"],
+  "forms": { "bar": "固體", "liquid": "液體" },
+  "picks": [
+    {
+      "name": "Marius Fabre 橄欖油馬賽皂",
+      "brand": "MARIUS FABRE · SAVON DE MARSEILLE",
+      "form": "bar",
+      "type": "真皂",
+      "good": ["無香料", "無防腐劑", "無棕櫚油"],
+      "trade": ["真皂偏鹼性"],
+      "inci": "Sodium Olivate, Sodium Cocoate, Aqua, Glycerin, Sodium Chloride, Sodium Hydroxide",
+      "stores": [
+        { "n": "跨境網購" },
+        { "n": "台灣實體通路待確認", "unsure": true }
+      ],
+      "note": "法國傳統馬賽皂，成分只有橄欖油、椰子油皂化而成。成分取自歐洲零售商標示，有的零售商列出的成分沒有 Sodium Cocoate，請以包裝為準。乾性肌洗後可擦乳液。",
+      "src": "https://www.greenweez.com/produit/savon-de-marseille-a-lhuile-dolive-200g/1MARI0714"
+    },
+    {
+      "name": "Dr. Bronner's 嬰兒無香精純淨皂",
+      "brand": "DR. BRONNER'S · BABY UNSCENTED BAR",
+      "form": "bar",
+      "type": "真皂",
+      "good": ["無香料", "無防腐劑", "公平貿易有機油脂"],
+      "trade": ["含棕櫚油", "真皂偏鹼性"],
+      "inci": "Sodium Palmate, Sodium Cocoate, Aqua, Glycerin, Sodium Olivate, Cannabis Sativa Seed Oil, Simmondsia Chinensis Seed Oil, Sodium Chloride, Citric Acid, Tocopherol",
+      "stores": [
+        { "n": "台灣有進口，通路待確認", "unsure": true }
+      ],
+      "note": "成分取自英國版標示。品牌的棕櫚油來自自營的公平貿易有機產地，和一般棕櫚油的毀林問題不同，但成分表上看不出這個差別，所以檢查結果仍會標出。",
+      "src": "https://drbronner.co.uk/products/baby-unscented-pure-castile-bar-soap"
+    },
+    {
+      "name": "Dr. Bronner's 嬰兒無香精液體皂",
+      "brand": "DR. BRONNER'S · BABY UNSCENTED LIQUID",
+      "form": "liquid",
+      "type": "液體真皂",
+      "good": ["無香料", "無防腐劑", "可稀釋使用"],
+      "trade": ["含棕櫚核仁油", "塑膠瓶", "真皂偏鹼性"],
+      "inci": "Water, Organic Coconut Oil, Potassium Hydroxide, Organic Palm Kernel Oil, Organic Olive Oil, Organic Hemp Oil, Organic Jojoba Oil, Citric Acid, Tocopherol",
+      "stores": [
+        { "n": "台灣有進口，通路待確認", "unsure": true }
+      ],
+      "note": "用氫氧化鉀做成的液體肥皂，不加防腐劑，靠肥皂本身的鹼性抑菌。成分取自北美零售標示。原液很濃，稀釋後使用更省，也能減少塑膠瓶用量。",
+      "src": "https://well.ca/products/dr-bronners-organic-pure-castile_18729.html"
+    },
+    {
+      "name": "多芬 乳霜香皂（原味）",
+      "brand": "DOVE · ORIGINAL BEAUTY BAR",
+      "form": "bar",
+      "type": "合成皂",
+      "good": ["接近中性", "洗後較不乾澀"],
+      "trade": ["含香料與致敏香料", "含 EDTA", "含二氧化鈦"],
+      "inci": "Sodium Lauroyl Isethionate, Stearic Acid, Lauric Acid, Sodium Oleate, Water, Sodium Isethionate, Sodium Stearate, Cocamidopropyl Betaine, Fragrance, Sodium Laurate, Tetrasodium EDTA, Sodium Chloride, Tetrasodium Etidronate, Alpha-Isomethyl Ionone, Citronellol, Hexyl Cinnamal, Linalool, Titanium Dioxide (CI 77891)",
+      "stores": [
+        { "n": "屈臣氏" },
+        { "n": "康是美" },
+        { "n": "全聯" },
+        { "n": "大型量販店" }
+      ],
+      "note": "不是真皂，而是以溫和合成起泡劑做成的合成皂，適合覺得肥皂太乾的人。成分依美國版官方標示整理，部分次要成分可能未列出；台灣版配方請以包裝為準，通路為常見販售點，未逐店確認。",
+      "src": "https://www.dove.com/us/en/p/original-beauty-bar.html/00011111610798"
+    }
+  ]
+}

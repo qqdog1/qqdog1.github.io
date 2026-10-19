@@ -1,0 +1,46 @@
+{
+  "key": "toothpaste",
+  "name": "牙膏",
+  "prefs": [
+    { "k": "sls", "label": "SLS／SLES 起泡劑" },
+    { "k": "triclosan", "label": "三氯沙" },
+    { "k": "plastic", "label": "塑膠微粒" },
+    { "k": "dyes", "label": "人工色素" },
+    { "k": "tio2", "label": "二氧化鈦" },
+    { "k": "paraben", "label": "Paraben 防腐劑" },
+    { "k": "sweet", "label": "人工甜味劑" },
+    { "k": "fluoride", "label": "氟化物（想要無氟）" }
+  ],
+  "defaultPrefs": ["sls", "triclosan", "plastic", "dyes"],
+  "samples": ["Sorbitol, Water, Hydrated Silica, Sodium Lauryl Sulfate, PEG-12, Flavor, Cellulose Gum, Sodium Fluoride, Sodium Saccharin, Titanium Dioxide, CI 42090, Carrageenan", "山梨糖醇、水、水合二氧化矽、甘油、月桂基硫酸鈉、香料、三仙膠、單氟磷酸鈉、糖精鈉、對羥基苯甲酸甲酯、檸檬黃、亮藍", "Glycerin, Water, Calcium Carbonate, Xylitol, Lauryl Glucoside, Aroma, Xanthan Gum, Sodium Fluoride, Limonene, Mentha Piperita Leaf Extract"],
+  "picks": [
+    {
+      "name": "舒酸定 強化琺瑯質牙膏",
+      "brand": "SENSODYNE · PRONAMEL",
+      "good": ["無 SLS", "含氟", "抗敏感"],
+      "trade": ["含二氧化鈦", "含糖精鈉"],
+      "inci": "Water, Sorbitol, Hydrated Silica, Glycerin, PEG-8, Cocamidopropyl Betaine, Flavor, Xanthan Gum, Sodium Saccharin, Titanium Dioxide, Sodium Hydroxide, Potassium Nitrate, Sodium Fluoride",
+      "stores": [
+        { "n": "屈臣氏" },
+        { "n": "康是美" },
+        { "n": "全聯" },
+        { "n": "大型量販店" }
+      ],
+      "note": "成分取自美國版標示（Pronamel 標示不含 SLS、人工色素、paraben、三氯沙）。台灣版配方請以包裝為準；通路為常見販售點，未逐店確認。",
+      "src": "https://giantfoodstores.com/groceries/product/sensodyne-pronamel-mine-essence-daily-protection-toothpaste-4-oz-pkg/163956"
+    },
+    {
+      "name": "Weleda 植物牙膏凝膠",
+      "brand": "WELEDA · PLANT GEL",
+      "good": ["無 SLS", "無人工色素", "無二氧化鈦"],
+      "trade": ["無氟"],
+      "inci": "Glycerin, Water (Aqua), Hydrated Silica, Alcohol, Microcrystalline Cellulose, Krameria Triandra Root Extract, Commiphora Myrrha Resin Extract, Chamomilla Recutita (Matricaria) Flower Extract, Esculin, Xanthan Gum, Flavor (Aroma), Limonene",
+      "stores": [
+        { "n": "跨境網購" },
+        { "n": "台灣實體通路待確認", "unsure": true }
+      ],
+      "note": "德國天然品牌，NATRUE 認證。不含氟，防蛀力較弱，蛀牙風險高的人建議先問牙醫。",
+      "src": "https://www.hollandandbarrett.com/shop/product/weleda-planten-tandpasta-60071196"
+    }
+  ]
+}

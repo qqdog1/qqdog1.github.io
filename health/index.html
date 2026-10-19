@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>日用品成分檢查站</title>
+<meta name="description" content="整理每天接觸身體的日用品：為什麼要注意、怎麼用手機掃描成分表檢查，以及對人體與環境都比較友善的選擇。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./">日用品成分檢查站</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Health &amp; environment</div>
+      <h1>每天碰到身體的東西，<em>先看懂再買。</em></h1>
+      <p class="lede">每一種日用品都分成三段：先說明為什麼值得注意，再讓你在貨架前用手機掃描成分表當場檢查，最後列出對人體與環境都比較友善的選擇。所有檢查都在你的手機上完成，不會上傳照片。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Now available</div>
+      <h2>已上線</h2>
+      <div class="items" id="live" style="margin-top:18px"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Browse</div>
+      <h2>依生活場景找</h2>
+      <p class="lede">有成分表的產品（牙膏、洗髮精）用成分比對；沒有成分表的器具（漱口杯、鍋具）則看材質。</p>
+      <div class="cats" id="cats"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>這是原型網站。內容依公開資料整理，實際配方以包裝標示為準。本站不構成醫療建議。</p>
+  </div>
+</footer>
+
+<script src="assets/catalog.js"></script>
+</body>
+</html>
